@@ -213,13 +213,16 @@ namespace FASTER.Models
         public int    MaxPing                  { get; set; } = 60;
         public bool   MaxDesyncEnabled         { get; set; }
         public int    MaxDesync                { get; set; }
-        public int    MaxCustomFileSize        { get; set; } = 160;
-        public int    MaxPacketSize            { get; set; } = 1400;
-        public double MinBandwidth             { get; set; } = 131072;
-        public double MaxBandwidth             { get; set; } = 10000000000;
-        public int    MaxMessagesSend          { get; set; } = 128;
-        public int    MaxSizeNonguaranteed     { get; set; } = 256;
-        public int    MaxSizeGuaranteed        { get; set; } = 512;
+        public int    MaxCustomFileSize        { get; set; } = 2048000;
+        public int    MaxPacketSize            { get; set; } = 1430;
+        public double MinBandwidthServer       { get; set; } = 480000000;
+        public double MaxBandwidthServer       { get; set; } = 800000000;
+        public double MinBandwidthClient       { get; set; } = 65536;
+        public double MaxBandwidthClient       { get; set; } = 6250000;
+        public double initBandwidthClient      { get; set; } = 1250000;
+        public int    MaxMessagesSend          { get; set; } = 4096;
+        public int    MaxSizeNonguaranteed     { get; set; } = 1300;
+        public int    MaxSizeGuaranteed        { get; set; } = 1300;
         public double MinErrorToSend           { get; set; } = 0.001;
         public double MinErrorToSendNear       { get; set; } = 0.01;
         public string CpuCount                 { get; set; } = string.Empty;

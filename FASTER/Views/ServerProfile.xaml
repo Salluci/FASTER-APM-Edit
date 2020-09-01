@@ -784,10 +784,6 @@
                             <TextBox Name="IMinErrorToSendNear" Grid.Row="5" Grid.Column="1" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Min Error To Send Near" Margin="5"/>
                             <TextBox Name="ICpuCount" Grid.Row="6" Grid.Column="1" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="CPU Core Count" Margin="5"/>
 
-                            <TextBox Name="IMinBandwidthClient" Grid.Row="1" Grid.Column="2" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Min Bandwidth - Client (bps)"  Margin="5"/>
-                            <TextBox Name="IMaxBandwidthClient" Grid.Row="2" Grid.Column="2" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Max Bandwidth - Client (bps)"  Margin="5"/>
-                            <TextBox Name="IinitBandwidthClient" Grid.Row="3" Grid.Column="2" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Init Bandwidth - Client (bps)"  Margin="5"/>
-
                             <TextBox Name="IExtraParams" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Extra Params" Margin="5"/>
                             <TextBox Name="IAdminUids" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Admin IDs (one per line)" VerticalScrollBarVisibility="Auto"/>
 
@@ -800,7 +796,35 @@
 
                         </Grid>
                     </Grid>
-                    <Grid Grid.Row="0" Grid.Column="1" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <Grid Grid.Row="0" Grid.Column="1" Margin="5,5,10,306">
+                        <Grid.Style>
+                            <Style TargetType="Grid">
+                                <Setter Property="Margin" Value="5"/>
+                                <Setter Property="Background" Value="{StaticResource MahApps.Brushes.Window.Background}"></Setter>
+                            </Style>
+                        </Grid.Style>
+                        <Grid Margin="0,0,0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.ColumnSpan="3">
+                                <Label Margin="2" Content="Client Bandwidth"/>
+                                <Separator/>
+                            </StackPanel>
+
+                            <TextBox Name="IMinBandwidthClient" Grid.Row="1" Grid.Column="0" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Min Bandwidth - Client (bps)"  Margin="5"/>
+                            <TextBox Name="IMaxBandwidthClient" Grid.Row="2" Grid.Column="0" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Max Bandwidth - Client (bps)"  Margin="5"/>
+                            <TextBox Name="IinitBandwidthClient" Grid.Row="3" Grid.Column="0" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Init Bandwidth - Client (bps)"  Margin="5"/>
+
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1" Margin="5,175,10,5">
                         <Grid.Style>
                             <Style TargetType="Grid">
                                 <Setter Property="Margin" Value="5"/>
@@ -823,14 +847,14 @@
                                 <Label Margin="2" Content="Server Scripting"/>
                                 <Separator/>
                             </StackPanel>
-                            <TextBox Name="IServerCommandPassword" Grid.Row="1" Grid.Column="0" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Server Command Password" Margin="10"/>
-                            <TextBox Name="IDoubleIdDetected" Grid.Row="2" Grid.Column="0" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="doubleIdDetected" Margin="10"/>
-                            <TextBox Name="IOnUserConnected" Grid.Row="3" Grid.Column="0" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="onUserConnected" Margin="10"/>
-                            <TextBox Name="IOnUserDisconnected" Grid.Row="4" Grid.Column="0" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="onUserDisconnected" Margin="10"/>
-                            <TextBox Name="IOnHackedData" Grid.Row="1" Grid.Column="1" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="onHackedData" Margin="10"/>
-                            <TextBox Name="IOnDifferentData" Grid.Row="2" Grid.Column="1" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="onDifferentData" Margin="10"/>
-                            <TextBox Name="IOnUnsignedData" Grid.Row="3" Grid.Column="1" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="onUnsignedData" Margin="10"/>
-                            <TextBox Name="IRegularCheck" Grid.Row="4" Grid.Column="1" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="regularCheck" Margin="10"/>
+                            <TextBox Name="IServerCommandPassword" Grid.Row="1" Grid.Column="0" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Server Command Password" Margin="5"/>
+                            <TextBox Name="IDoubleIdDetected" Grid.Row="2" Grid.Column="0" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="doubleIdDetected" Margin="5"/>
+                            <TextBox Name="IOnUserConnected" Grid.Row="3" Grid.Column="0" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="onUserConnected" Margin="5"/>
+                            <TextBox Name="IOnUserDisconnected" Grid.Row="4" Grid.Column="0" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="onUserDisconnected" Margin="5"/>
+                            <TextBox Name="IOnHackedData" Grid.Row="1" Grid.Column="1" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="onHackedData" Margin="5"/>
+                            <TextBox Name="IOnDifferentData" Grid.Row="2" Grid.Column="1" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="onDifferentData" Margin="5"/>
+                            <TextBox Name="IOnUnsignedData" Grid.Row="3" Grid.Column="1" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="onUnsignedData" Margin="5"/>
+                            <TextBox Name="IRegularCheck" Grid.Row="4" Grid.Column="1" AcceptsReturn="True" TextWrapping="Wrap" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="regularCheck" Margin="5"/>
                         </Grid>
                     </Grid>
                     <Grid Grid.Row="0" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">

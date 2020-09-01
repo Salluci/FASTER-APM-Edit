@@ -809,8 +809,8 @@ namespace FASTER.Views
                 "{",
                   "maxPacketSize = " + IMaxPacketSize.Text + ";",
                   "initBandwidth = " + IinitBandwidthClient.Text + ";",
-                  "minBandwidth = " + IminBandwidthClient.Text + ";",
-                  "maxBandwidth = " + ImaxBandwidthClient.Text + ";",
+                  "minBandwidth = " + IMinBandwidthClient.Text + ";",
+                  "maxBandwidth = " + IMaxBandwidthClient.Text + ";",
                 "};",
             };
             File.WriteAllLines(basic, basicLines);
