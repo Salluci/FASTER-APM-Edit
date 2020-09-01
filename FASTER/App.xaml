@@ -1,7 +1,7 @@
 ﻿<Application x:Class="FASTER.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="Views\Setup.xaml">
+             StartupUri="pack://application:,,,/Views/Setup.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

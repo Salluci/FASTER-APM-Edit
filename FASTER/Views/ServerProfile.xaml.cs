@@ -146,8 +146,11 @@ namespace FASTER.Views
             IMaxDesync.Text                     = profile.MaxDesync.ToString();
             IMaxCustomFileSize.Text             = profile.MaxCustomFileSize.ToString();
             IMaxPacketSize.Text                 = profile.MaxPacketSize.ToString();
-            IMinBandwidth.Text                  = profile.MinBandwidth.ToString(provider);
-            IMaxBandwidth.Text                  = profile.MaxBandwidth.ToString(provider);
+            IMinBandwidthServer.Text            = profile.MinBandwidthServer.ToString(provider);
+            IMaxBandwidthServer.Text            = profile.MaxBandwidthServer.ToString(provider);
+            IMinBandwidthClient.Text            = profile.MinBandwidthClient.ToString(provider);
+            IMaxBandwidthClient.Text            = profile.MaxBandwidthClient.ToString(provider);
+            IinitBandwidthClient.Text           = profile.initBandwidthClient.ToString(provider);
             IMaxMessagesSend.Text               = profile.MaxMessagesSend.ToString();
             IMaxSizeNonguaranteed.Text          = profile.MaxSizeNonguaranteed.ToString();
             IMaxSizeGuaranteed.Text             = profile.MaxSizeGuaranteed.ToString();
@@ -174,7 +177,7 @@ namespace FASTER.Views
             IBattleEye.IsChecked                = profile.BattleEye;
             IAdditionalParams.Text              = profile.additionalParams;
             IEnableAdditionalParams.IsChecked   = profile.enableAdditionalParams;
-            
+
             ToggleUi_HeadleddClientEnabled(IHeadlessClientEnabled);
             ToggleUi_VonEnabled(IVonEnabled);
             ToggleUi_VotingEnabled(IVotingEnabled);
@@ -271,49 +274,49 @@ namespace FASTER.Views
 
         private void ToggleUi_MaxDesyncEnabled(object uiElement, RoutedEventArgs e = null)
         {
-            if (IMaxDesyncEnabled.IsChecked ?? false) 
+            if (IMaxDesyncEnabled.IsChecked ?? false)
             { IMaxDesync.IsEnabled = true; }
-            else 
+            else
             { IMaxDesync.IsEnabled = false; }
         }
 
         private void ToggleUi_MaxPingEnabled(object uiElement, RoutedEventArgs e = null)
         {
-            if (IMaxPingEnabled.IsChecked ?? false) 
+            if (IMaxPingEnabled.IsChecked ?? false)
             { IMaxPing.IsEnabled = true; }
-            else 
+            else
             { IMaxPing.IsEnabled = false; }
         }
 
         private void ToggleUi_KickOnSlowNetworkEnabled(object uiElement, RoutedEventArgs e = null)
         {
-            if (IKickOnSlowNetworkEnabled.IsChecked ?? false) 
+            if (IKickOnSlowNetworkEnabled.IsChecked ?? false)
             { IKickOnSlowNetwork.IsEnabled = true; }
-            else 
+            else
             { IKickOnSlowNetwork.IsEnabled = false; }
         }
 
         private void ToggleUi_DisconnectTimeOutEnabled(object uiElement, RoutedEventArgs e = null)
         {
-            if (IDisconnectTimeOutEnabled.IsChecked ?? false) 
+            if (IDisconnectTimeOutEnabled.IsChecked ?? false)
             { IDisconnectTimeOut.IsEnabled = true; }
-            else 
+            else
             { IDisconnectTimeOut.IsEnabled = false; }
         }
 
         private void ToggleUi_MaxPacketLoss(object uiElement, RoutedEventArgs e = null)
         {
-            if (IMaxPacketLossEnabled.IsChecked ?? false) 
+            if (IMaxPacketLossEnabled.IsChecked ?? false)
             { IMaxPacketLoss.IsEnabled = true; }
-            else 
+            else
             { IMaxPacketLoss.IsEnabled = false; }
         }
 
         private void ToggleUi_PersistantBattlefield(object uiElement, RoutedEventArgs e = null)
         {
-            if (IPersistentBattlefield.IsChecked ?? false) 
+            if (IPersistentBattlefield.IsChecked ?? false)
             { IAutoInit.IsEnabled = true; }
-            else 
+            else
             { IAutoInit.IsEnabled = false; }
         }
 
@@ -479,13 +482,16 @@ namespace FASTER.Views
 
         private void IResetPerf_Click(object sender, RoutedEventArgs e)
         {
-            IMaxCustomFileSize.Text    = "160000";
-            IMaxPacketSize.Text        = "1400";
-            IMinBandwidth.Text         = "131072";
-            IMaxBandwidth.Text         = "10000000000";
-            IMaxMessagesSend.Text      = "128";
-            IMaxSizeGuaranteed.Text    = "512";
-            IMaxSizeNonguaranteed.Text = "256";
+            IMaxCustomFileSize.Text    = "2048000";
+            IMaxPacketSize.Text        = "1430";
+            IMinBandwidthServer.Text   = "480000000";
+            IMaxBandwidthServer.Text   = "800000000";
+            IMinBandwidthClient.Text   = "65536";
+            IMaxBandwidthServer.Text   = "6250000";
+            IinitBandwidthClient.Text  = "1250000";
+            IMaxMessagesSend.Text      = "4096";
+            IMaxSizeGuaranteed.Text    = "1300";
+            IMaxSizeNonguaranteed.Text = "1300";
             IMinErrorToSend.Text       = "0.001";
             IMinErrorToSendNear.Text   = "0.01";
         }
@@ -569,7 +575,7 @@ namespace FASTER.Views
             }
             IHeadlessModsCount.Content = IHeadlessModsList.Items.Cast<object>().Count(i => ((CheckBox) i).IsChecked == true);
         }
-        
+
         private async void ICopyModsKeys_Click(object sender, RoutedEventArgs e)
         {
             ICopyModsKeys.IsEnabled = false;
@@ -681,8 +687,11 @@ namespace FASTER.Views
             profile.MaxDesync                = Convert.ToInt32(Convert.ToDouble(IMaxDesync.Text,         provider), provider);
             profile.MaxCustomFileSize        = Convert.ToInt32(Convert.ToDouble(IMaxCustomFileSize.Text, provider), provider);
             profile.MaxPacketSize            = Convert.ToInt32(Convert.ToDouble(IMaxPacketSize.Text,     provider), provider);
-            profile.MinBandwidth             = double.Parse(IMinBandwidth.Text, provider);
-            profile.MaxBandwidth             = double.Parse(IMaxBandwidth.Text, provider);
+            profile.MinBandwidthServer       = double.Parse(IMinBandwidthServer.Text, provider);
+            profile.MaxBandwidthServer       = double.Parse(IMaxBandwidthServer.Text, provider);
+            profile.MinBandwidthClient       = double.Parse(IMinBandwidthClient.Text, provider);
+            profile.MaxBandwidthClient       = double.Parse(IMaxBandwidthClient.Text, provider);
+            profile.initBandwidthClient      = double.Parse(IinitBandwidthClient.Text, provider);
             profile.MaxMessagesSend          = Convert.ToInt32(Convert.ToDouble(IMaxMessagesSend.Text,      provider), provider);
             profile.MaxSizeNonguaranteed     = Convert.ToInt32(Convert.ToDouble(IMaxSizeNonguaranteed.Text, provider), provider);
             profile.MaxSizeGuaranteed        = Convert.ToInt32(Convert.ToDouble(IMaxSizeGuaranteed.Text,    provider), provider);
@@ -741,10 +750,10 @@ namespace FASTER.Views
                 string path        = _profilesPath;
                 string profilePath = path
                                    + (profileName + "\\");
-                if (!Directory.Exists(path)) 
+                if (!Directory.Exists(path))
                 { Directory.CreateDirectory(path); }
 
-                if (!Directory.Exists(profilePath)) 
+                if (!Directory.Exists(profilePath))
                 { Directory.CreateDirectory(profilePath); }
 
                 if (!File.Exists(profilePath + (profileName + "_config.cfg")))
@@ -791,12 +800,18 @@ namespace FASTER.Views
                 $"MaxMsgSend = {IMaxMessagesSend.Text};",
                 $"MaxSizeGuaranteed = {IMaxSizeGuaranteed.Text};",
                 $"MaxSizeNonguaranteed = {IMaxSizeNonguaranteed.Text};",
-                $"MinBandwidth = {IMinBandwidth.Text};",
-                $"MaxBandwidth = {IMaxBandwidth.Text};",
+                $"MinBandwidth = {IMinBandwidthServer.Text};",
+                $"MaxBandwidth = {IMaxBandwidthServer.Text};",
                 $"MinErrorToSend = {IMinErrorToSend.Text.Replace(',', '.')};",
                 $"MinErrorToSendNear = {IMinErrorToSendNear.Text.Replace(',', '.')};",
                 $"MaxCustomFileSize = {IMaxCustomFileSize.Text};",
-                "class sockets{maxPacketSize = " + IMaxPacketSize.Text + ";};"
+                "class sockets",
+                "{",
+                  "maxPacketSize = " + IMaxPacketSize.Text + ";",
+                  "initBandwidth = " + IinitBandwidthClient.Text + ";",
+                  "minBandwidth = " + IminBandwidthClient.Text + ";",
+                  "maxBandwidth = " + ImaxBandwidthClient.Text + ";",
+                "};",
             };
             File.WriteAllLines(basic, basicLines);
             #endregion
@@ -849,7 +864,7 @@ namespace FASTER.Views
             var profileTrue    = profileAlways.Select(s => s.Replace("True", "1")).ToList();
             var profileFalse   = profileTrue.Select(s => s.Replace("False", "0")).ToList();
             File.WriteAllLines(serverProfile, profileFalse);
-            #endregion  
+            #endregion
         }
 
         private void ConfFileCreation(string config)
@@ -970,19 +985,19 @@ namespace FASTER.Views
                 configLines.Add("voteThreshold = 0;");
             }
 
-            if (ILoopback.IsChecked ?? false) 
+            if (ILoopback.IsChecked ?? false)
             { configLines.Add("loopback = True;"); }
 
-            if (IDisconnectTimeOutEnabled.IsChecked ?? false) 
+            if (IDisconnectTimeOutEnabled.IsChecked ?? false)
             { configLines.Add($"disconnectTimeout = {IDisconnectTimeOut.Text};"); }
 
-            if (IMaxDesyncEnabled.IsChecked ?? false) 
+            if (IMaxDesyncEnabled.IsChecked ?? false)
             { configLines.Add($"maxdesync = {IMaxDesync.Text};"); }
 
-            if (IMaxPingEnabled.IsChecked ?? false) 
+            if (IMaxPingEnabled.IsChecked ?? false)
             { configLines.Add($"maxping = {IMaxPing.Text};"); }
 
-            if (IMaxPacketLossEnabled.IsChecked ?? false) 
+            if (IMaxPacketLossEnabled.IsChecked ?? false)
             { configLines.Add($"maxpacketloss = {IMaxPacketLoss.Text};"); }
 
             if (IKickOnSlowNetworkEnabled.IsChecked ?? false)
@@ -998,10 +1013,10 @@ namespace FASTER.Views
                 }
             }
 
-            if (IServerConsoleLogEnabled.IsChecked ?? false) 
+            if (IServerConsoleLogEnabled.IsChecked ?? false)
             { configLines.Add("logFile = \"server_console.log\";"); }
 
-            if (IRequiredBuildEnabled.IsChecked ?? false) 
+            if (IRequiredBuildEnabled.IsChecked ?? false)
             { configLines.Add($"requiredBuild = {IRequiredBuild.Text};"); }
         }
 
@@ -1028,8 +1043,11 @@ namespace FASTER.Views
             newMissions.AddRange(Directory.GetFiles(Path.Combine(Properties.Settings.Default.serverPath, "mpmissions"), "*.pbo")
                                           .Select(mission => mission.Replace(Path.Combine(Properties.Settings.Default.serverPath, "mpmissions") + "\\", "")));
 
+            newMissions.AddRange(Directory.GetDirectories(Path.Combine(Properties.Settings.Default.serverPath, "mpmissions"))
+                                          .Select(mission => mission.Replace(Path.Combine(Properties.Settings.Default.serverPath, "mpmissions") + "\\", "")));
+
             foreach (var mission in newMissions.ToList()
-                                               .Where(mission => currentMissions.Contains(mission))) 
+                                               .Where(mission => currentMissions.Contains(mission)))
             { newMissions.Remove(mission); }
 
             foreach (var mission in newMissions.ToList())
@@ -1037,7 +1055,7 @@ namespace FASTER.Views
                 var checkedMission = checkedMissions.FirstOrDefault(m => (string)m.Content == mission.Replace(".pbo", ""))?.IsChecked ?? false;
                 IMissionCheckList.Items.Add(new CheckBox { Content = mission.Replace(".pbo", "") , IsChecked = checkedMission});
             }
-            
+
             IMissionCheckList.SelectedValue = checkedMissions;
         }
 
@@ -1050,8 +1068,8 @@ namespace FASTER.Views
             var checkedServerMods = new List<CheckBox>();
             var checkedHcMods = new List<CheckBox>();
             var checkedClientMods = new List<CheckBox>();
-            
-            if (profile != null) 
+
+            if (profile != null)
             { SetUpModlists(profile, checkedServerMods, checkedHcMods, checkedClientMods); }
 
             IServerModsList.Items.Clear();
@@ -1080,9 +1098,9 @@ namespace FASTER.Views
                 //Cleanup localmodfolders
                 foreach (var folder in targetForDeletion)
                 { Properties.Settings.Default.localModFolders.Remove(folder); }
-                
+
                 foreach (var addon in newMods.ToList()
-                                             .Where(addon => currentMods.Contains(addon))) 
+                                             .Where(addon => currentMods.Contains(addon)))
                 { newMods.Remove(addon); }
 
                 foreach (var addon in newMods.ToList())
@@ -1107,19 +1125,19 @@ namespace FASTER.Views
         {
             foreach (var mod in profile.ServerMods.Split(';'))
             {
-                if (checkedServerMods.FirstOrDefault(c => (string) c.Content == mod.Replace(";", "")) == null && !string.IsNullOrWhiteSpace(mod)) 
+                if (checkedServerMods.FirstOrDefault(c => (string) c.Content == mod.Replace(";", "")) == null && !string.IsNullOrWhiteSpace(mod))
                     checkedServerMods.Add(new CheckBox { Content = mod.Replace(";", ""), IsChecked = true });
             }
             IServerModsCount.Content = IServerModsList.Items.Cast<object>().Count(i => ((CheckBox) i).IsChecked == true);
             foreach (var mod in profile.HeadlessMods.Split(';'))
             {
-                if (checkedHcMods.FirstOrDefault(c => (string) c.Content == mod.Replace(";", "")) == null && !string.IsNullOrWhiteSpace(mod)) 
+                if (checkedHcMods.FirstOrDefault(c => (string) c.Content == mod.Replace(";", "")) == null && !string.IsNullOrWhiteSpace(mod))
                     checkedHcMods.Add(new CheckBox { Content = mod.Replace(";", ""), IsChecked = true });
             }
             IClientModsCount.Content = IClientModsList.Items.Cast<object>().Count(i => ((CheckBox) i).IsChecked == true);
             foreach (var mod in profile.ClientMods.Split(';'))
             {
-                if (checkedClientMods.FirstOrDefault(c => (string) c.Content == mod.Replace(";", "")) == null && !string.IsNullOrWhiteSpace(mod)) 
+                if (checkedClientMods.FirstOrDefault(c => (string) c.Content == mod.Replace(";", "")) == null && !string.IsNullOrWhiteSpace(mod))
                     checkedClientMods.Add(new CheckBox { Content = mod.Replace(";", ""), IsChecked = true });
             }
             IHeadlessModsCount.Content = IHeadlessModsList.Items.Cast<object>().Count(i => ((CheckBox) i).IsChecked == true);
@@ -1199,7 +1217,7 @@ namespace FASTER.Views
                                            {{ "Name", Properties.Settings.Default.steamUserName }});
                 }
             }
-                
+
             ProcessStartInfo sStartInfo = new ProcessStartInfo(IExecutable.Text, commandLine);
             Process          sProcess   = new Process { StartInfo = sStartInfo };
             sProcess.Start();
@@ -1212,10 +1230,10 @@ namespace FASTER.Views
 
         private string SetCommandLine(string configs, string profilePath, string profileName, string playerMods, string serverMods)
         {
-            var armaBranch = (Properties.Settings.Default.serverBranch == "Contact") 
-                ? "contact;" 
-                : ((Properties.Settings.Default.serverBranch == "Creator DLC") 
-                    ? "GM;" 
+            var armaBranch = (Properties.Settings.Default.serverBranch == "Contact")
+                ? "contact;"
+                : ((Properties.Settings.Default.serverBranch == "Creator DLC")
+                    ? "GM;"
                     : null);
             var commandLine = "-port=" + IPort.Text;
             commandLine += " \"-config=" + configs + "_config.cfg\"";
@@ -1225,31 +1243,31 @@ namespace FASTER.Views
             commandLine += " \"-mod=" + armaBranch + playerMods + "\"";
             commandLine += " \"-serverMod=" + serverMods + "\"";
 
-            if (IEnableHyperThreading.IsChecked ?? false) 
+            if (IEnableHyperThreading.IsChecked ?? false)
             { commandLine += " -enableHT"; }
 
-            if (IFilePatching.IsChecked ?? false) 
+            if (IFilePatching.IsChecked ?? false)
             { commandLine += " -filePatching"; }
 
-            if (INetlog.IsChecked ?? false) 
+            if (INetlog.IsChecked ?? false)
             { commandLine += " -netlog"; }
 
-            if (IRankingEnabled.IsChecked ?? false) 
+            if (IRankingEnabled.IsChecked ?? false)
             { commandLine += " -ranking=Servers\\" + Functions.SafeName(IDisplayName.Content.ToString()) + "\\" + "ranking.log"; }
 
-            if (IPidEnabled.IsChecked ?? false) 
+            if (IPidEnabled.IsChecked ?? false)
             { commandLine += " -pid=Servers\\" + Functions.SafeName(IDisplayName.Content.ToString()) + "\\" + "pid.log"; }
 
-            if (IAutoInit.IsChecked ?? false) 
+            if (IAutoInit.IsChecked ?? false)
             { commandLine += " -autoInit"; }
 
-            if (!string.IsNullOrEmpty(IMaxMem.Text)) 
+            if (!string.IsNullOrEmpty(IMaxMem.Text))
             { commandLine += " \"-maxMem=" + IMaxMem.Text + "\""; }
 
-            if (!string.IsNullOrEmpty(ICpuCount.Text)) 
+            if (!string.IsNullOrEmpty(ICpuCount.Text))
             { commandLine += " \"-cpuCount=" + ICpuCount.Text + "\""; }
 
-            if (!string.IsNullOrEmpty(IExtraParams.Text)) 
+            if (!string.IsNullOrEmpty(IExtraParams.Text))
             { commandLine += " " + IExtraParams.Text; }
 
             return commandLine;
@@ -1283,7 +1301,7 @@ namespace FASTER.Views
             if (!Directory.Exists(Path.Combine(path, "Servers", profile)))
             { return false; }
 
-            return File.Exists(Path.Combine(path, "Servers", profile, $"{profile}_config.cfg")) 
+            return File.Exists(Path.Combine(path, "Servers", profile, $"{profile}_config.cfg"))
                 && File.Exists(Path.Combine(path, "Servers", profile, $"{profile}_basic.cfg"));
         }
 
@@ -1313,7 +1331,7 @@ namespace FASTER.Views
 
             foreach (var line in steamMods)
             {
-                try 
+                try
                 { mods.AddRange(Directory.GetFiles(Path.Combine(line, "keys"))); }
                 catch (DirectoryNotFoundException)
                 { /*there was no directory*/ }
@@ -1321,7 +1339,7 @@ namespace FASTER.Views
 
             foreach (var folder in Properties.Settings.Default.localModFolders)
             {
-                try 
+                try
                 { mods.AddRange(Directory.GetFiles(Path.Combine(folder, "keys"))); }
                 catch (DirectoryNotFoundException)
                 { /*there was no directory*/ }
@@ -1339,6 +1357,6 @@ namespace FASTER.Views
                 }
             }
             await Task.Delay(1000);
-        }        
+        }
     }
 }
