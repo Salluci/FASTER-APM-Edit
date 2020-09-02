@@ -68,13 +68,13 @@ namespace FASTER.Views
                 }
                 else
                 {
-                    IMessageText.Text = "There is no update available please try again later.";
+                    IMessageText.Text = "There is no update available. Please try again later.";
                     IMessageDialog.IsOpen = true;
                 }
             }
             else
             {
-                IMessageText.Text     = "There is a problem reaching update server please check your internet connection and try again later.";
+                IMessageText.Text     = "There was a problem reaching the update server. Please check your internet connection and try again later.";
                 IMessageDialog.IsOpen = true;
             }
         }
@@ -172,7 +172,7 @@ namespace FASTER.Views
         }
 
         private void IUpdateApp_OnClick(object sender, RoutedEventArgs e)
-        { AutoUpdater.Start("https://raw.githubusercontent.com/Foxlider/Fox-s-Arma-Server-Tool-Extended-Rewrite/master/FASTER_Version.xml"); }
+        { AutoUpdater.Start("https://raw.githubusercontent.com/Salluci/Faster-APM-Edit/master/FASTER_Version.xml"); }
 
         private void APIKeyButton_Click(object sender, RoutedEventArgs e)
         { Functions.OpenBrowser("https://forums.bohemia.net/forums/topic/224359-foxs-arma-server-tool-extended-rewrite-faster/"); }
