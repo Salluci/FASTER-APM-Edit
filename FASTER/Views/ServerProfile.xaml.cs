@@ -1343,7 +1343,7 @@ namespace FASTER.Views
             foreach (var line in steamMods)
             {
                 try
-                { mods.AddRange(Directory.GetFiles(Path.Combine(line, "keys"))); }
+                { mods.AddRange(Directory.GetFiles(Path.Combine(line, "keys"), "*.bikey")); }
                 catch (DirectoryNotFoundException)
                 { /*there was no directory*/ }
             }
@@ -1351,7 +1351,7 @@ namespace FASTER.Views
             foreach (var folder in Properties.Settings.Default.localModFolders)
             {
                 try
-                { mods.AddRange(Directory.GetFiles(Path.Combine(folder, "keys"))); }
+                { mods.AddRange(Directory.GetFiles(Path.Combine(folder, "keys"), "*.bikey")); }
                 catch (DirectoryNotFoundException)
                 { /*there was no directory*/ }
             }
