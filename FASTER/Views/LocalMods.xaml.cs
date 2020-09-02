@@ -70,7 +70,7 @@ namespace FASTER.Views
                 { Directory.Delete(localMod.Path, true); }
                 catch
                 {
-                    MainWindow.Instance.IFlyoutMessage.Content = $"Could not delete mod \"{localMod.Name}\"";
+                    MainWindow.Instance.IFlyoutMessage.Content = $"Could not delete mod \"{localMod.Name}\".";
                     MainWindow.Instance.IFlyout.IsOpen         = true;
                 }
             }
@@ -86,7 +86,7 @@ namespace FASTER.Views
             try
             { Process.Start(localMod.Path); }
             catch (Exception ex)
-            { MessageBox.Show("Impossible to open the mod : " + ex.Message); }
+            { MessageBox.Show("Impossible to open the mod:" + ex.Message); }
         }
     }
 }

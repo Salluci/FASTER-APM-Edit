@@ -35,7 +35,9 @@ namespace FASTER.Models
             List<string> foldersToSearch = new List<string>();
 
             if (serverPathOnly && !string.IsNullOrEmpty(Properties.Settings.Default.serverPath))
-            { foldersToSearch.Add(Properties.Settings.Default.serverPath); }
+            { foldersToSearch.Add(Properties.Settings.Default.serverPath);
+              foldersToSearch.Add(Properties.Settings.Default.serverPath + @"\!Workshop");
+            }
 
             if (!serverPathOnly && Properties.Settings.Default.localModFolders != null) 
             { foldersToSearch.AddRange(Properties.Settings.Default.localModFolders.Where(folder => folder != null && folder != Properties.Settings.Default.serverPath)); }

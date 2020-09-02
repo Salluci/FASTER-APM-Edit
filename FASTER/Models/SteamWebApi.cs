@@ -18,7 +18,7 @@ namespace FASTER.Models
         private const string V3 = "&publishedfileids[0]=";
 
         // Gets mod info for multiple mods
-        public static List<JObject> GetFileDetails(List<int> modIds)
+        public static List<JObject> GetFileDetails(List<double> modIds)
         {
             try 
             {
@@ -33,7 +33,7 @@ namespace FASTER.Models
         }
 
         // Get mod info for single mod
-        public static JObject GetSingleFileDetails(int modId)
+        public static JObject GetSingleFileDetails(double modId)
         {
             try
             {

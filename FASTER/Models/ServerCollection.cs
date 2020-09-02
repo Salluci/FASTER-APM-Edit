@@ -131,10 +131,10 @@ namespace FASTER.Models
         public string   AdminPassword         { get; set; } = string.Empty;
         public int      MaxPlayers            { get; set; } = 32;
         public int      Port                  { get; set; } = 2302;
-        public bool     HeadlessClientEnabled { get; set; }
+        public bool     HeadlessClientEnabled { get; set; } = true;
         public string   HeadlessIps           { get; set; } = "127.0.0.1";
         public string   LocalClients          { get; set; } = "127.0.0.1";
-        public int      NoOfHeadlessClients   { get; set; }
+        public int      NoOfHeadlessClients   { get; set; } = 3;
         public bool     Loopback              { get; set; }
         public bool     Upnp                  { get; set; }
         public bool     Netlog                { get; set; }
@@ -146,12 +146,12 @@ namespace FASTER.Models
         public bool     VotingEnabled         { get; set; } = true;
         public int      VotingMinPlayers      { get; set; } = 3;
         public decimal  VotingThreshold       { get; set; } = 33;
-        public int      AllowFilePatching     { get; set; }
-        public int      VerifySignatures      { get; set; }
+        public int      AllowFilePatching     { get; set; } = 0;
+        public int      VerifySignatures      { get; set; } = 0;
         public bool     RequiredBuildEnabled  { get; set; }
         public bool     RequiredBuild         { get; set; } = false;
         public bool     KickDuplicates        { get; set; }
-        public bool     VonEnabled            { get; set; } = true;
+        public bool     VonEnabled            { get; set; } = false;
         public int      CodecQuality          { get; set; } = 3;
 
         public bool ServerConsoleLogEnabled { get; set; }
@@ -174,7 +174,7 @@ namespace FASTER.Models
         public string Missions                 { get; set; } = string.Empty;
         public bool   PersistentBattlefield    { get; set; }
         public bool   AutoInit                 { get; set; }
-        public string DifficultyPreset         { get; set; } = "Regular";
+        public string DifficultyPreset         { get; set; } = "Custom";
         public bool   ReducedDamage            { get; set; }
         public string GroupIndicators          { get; set; } = "Never";
         public string FriendlyNameTags         { get; set; } = "Never";
@@ -198,8 +198,8 @@ namespace FASTER.Models
         public bool   AutoReporting            { get; set; }
         public bool   ScoreTable               { get; set; }
         public bool   TacticalPing             { get; set; }
-        public double AiAccuracy               { get; set; } = 0.95;
-        public double AiSkill                  { get; set; } = 0.55;
+        public double AiAccuracy               { get; set; } = 0.3;
+        public double AiSkill                  { get; set; } = 0.85;
         public int    AiPreset                 { get; set; } = 3;
         public bool   MaxPacketLossEnabled     { get; set; }
         public int    MaxPacketLoss            { get; set; }
@@ -207,8 +207,8 @@ namespace FASTER.Models
         public int    DisconnectTimeout        { get; set; } = 90;
         public bool   KickOnSlowNetworkEnabled { get; set; }
         public string KickOnSlowNetwork        { get; set; } = string.Empty;
-        public int    TerrainGrid              { get; set; } = 10;
-        public int    ViewDistance             { get; set; } = 2500;
+        public int    TerrainGrid              { get; set; } = 25;
+        public int    ViewDistance             { get; set; } = 12000;
         public bool   MaxPingEnabled           { get; set; }
         public int    MaxPing                  { get; set; } = 60;
         public bool   MaxDesyncEnabled         { get; set; }
@@ -220,6 +220,7 @@ namespace FASTER.Models
         public double MinBandwidthClient       { get; set; } = 65536;
         public double MaxBandwidthClient       { get; set; } = 6250000;
         public double initBandwidthClient      { get; set; } = 1250000;
+        public bool   UseClientBandwidth       { get; set; } = false;
         public int    MaxMessagesSend          { get; set; } = 4096;
         public int    MaxSizeNonguaranteed     { get; set; } = 1300;
         public int    MaxSizeGuaranteed        { get; set; } = 1300;
@@ -239,7 +240,7 @@ namespace FASTER.Models
         public string OnDifferentData          { get; set; } = string.Empty;
         public string OnUnsignedData           { get; set; } = string.Empty;
         public string RegularCheck             { get; set; } = string.Empty;
-        public bool   BattleEye                { get; set; } = true;
+        public bool   BattleEye                { get; set; } = false;
         public bool   enableAdditionalParams   { get; set; }
         public string additionalParams         { get; set; } = string.Empty;
     }

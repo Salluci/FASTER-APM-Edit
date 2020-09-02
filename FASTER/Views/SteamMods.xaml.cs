@@ -127,7 +127,7 @@ namespace FASTER.Views
                 try
                 {
                     var sModId = steamMod.Replace(Path.Combine(Properties.Settings.Default.steamCMDPath, "steamapps", "workshop", "content", "107410"), "").Replace("\\", "");
-                    var modId = int.Parse(sModId);
+                    var modId = double.Parse(sModId);
                     var info  = SteamMod.GetModInfo(modId);
                     var temp  = currentMods?.FirstOrDefault(m => m.WorkshopId == modId);
 
@@ -193,7 +193,7 @@ namespace FASTER.Views
                 {
                     using EventLog eventLog = new EventLog("Application")
                         { Source = "FASTER" };
-                    eventLog.WriteEntry($"Error occured while importing mod file : [{e.GetType()}] {e.Message}", EventLogEntryType.Warning);
+                    eventLog.WriteEntry($"Error occured while importing mod list: [{e.GetType()}] {e.Message}", EventLogEntryType.Warning);
                 }
             }
             while (!dataReader.EndOfStream);
@@ -245,10 +245,10 @@ namespace FASTER.Views
                     _ = MetroWindow.ContentSteamUpdater.RunSteamCommand(steamCmd, steamCommand, "addon", modsToUpdate);
                 }
                 else
-                { MetroWindow.DisplayMessage("No Mods to Update"); }
+                { MetroWindow.DisplayMessage("No Mods to Update."); }
             }
             else
-            { MetroWindow.DisplayMessage("Check all fields are correctly filled out on Steam Updater"); }
+            { MetroWindow.DisplayMessage("Check all fields are correctly filled out on Steam Updater."); }
         }
         private async void UpdateMod(object sender, RoutedEventArgs e)
         {
@@ -256,7 +256,7 @@ namespace FASTER.Views
             await UpdateMod(steamMod.WorkshopId, steamMod.Name);
         }
 
-        private async Task UpdateMod(int modId, string modName, bool singleMod = true)
+        private async Task UpdateMod(double modId, string modName, bool singleMod = true)
         {
             if (MetroWindow.ContentSteamUpdater.ReadyToUpdate())
             {

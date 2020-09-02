@@ -34,6 +34,18 @@ namespace FASTER.Properties {
                 this["serverPath"] = value;
             }
         }
+
+        public string serverPathMods
+        {
+            get
+            {
+                return ((string)(this["serverPath"]));
+            }
+            set
+            {
+                this["serverPath"] = value;
+            }
+        }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -66,117 +66,118 @@ namespace FASTER.Views
             // Add any initialization after the InitializeComponent() call
             _safeName = profile.SafeName;
 
-            IDisplayName.Content             = profile.DisplayName;
-            IServerName.Text                 = profile.ServerName;
-            IExecutable.Text                 = profile.Executable;
-            IPassword.Password               = profile.Password;
-            IAdminPassword.Password          = profile.AdminPassword;
-            IMaxPlayers.Text                 = profile.MaxPlayers.ToString();
-            IPort.Text                       = profile.Port.ToString();
+            IDisplayName.Content = profile.DisplayName;
+            IServerName.Text = profile.ServerName;
+            IExecutable.Text = profile.Executable;
+            IPassword.Password = profile.Password;
+            IAdminPassword.Password = profile.AdminPassword;
+            IMaxPlayers.Text = profile.MaxPlayers.ToString();
+            IPort.Text = profile.Port.ToString();
             IHeadlessClientEnabled.IsChecked = profile.HeadlessClientEnabled;
-            IHeadlessIps.Text                = profile.HeadlessIps;
-            ILocalClients.Text               = profile.LocalClients;
-            INoOfHeadlessClients.Value       = profile.NoOfHeadlessClients;
-            ILoopback.IsChecked              = profile.Loopback;
-            IUpnp.IsChecked                  = profile.Upnp;
-            INetlog.IsChecked                = profile.Netlog;
+            IHeadlessIps.Text = profile.HeadlessIps;
+            ILocalClients.Text = profile.LocalClients;
+            INoOfHeadlessClients.Value = profile.NoOfHeadlessClients;
+            ILoopback.IsChecked = profile.Loopback;
+            IUpnp.IsChecked = profile.Upnp;
+            INetlog.IsChecked = profile.Netlog;
             // IAutoRestartEnabled.IsChecked = profile.AutoRestartEnabled
             // IDailyRestartAEnabled.IsChecked = profile.DailyRestartAEnabled
             // IDailyRestartA.SelectedTime = profile.DailyRestartA
             // IDailyRestartBEnabled.IsChecked = profile.DailyRestartBEnabled
             // IDailyRestartB.Text = profile.DailyRestartB
-            IVotingEnabled.IsChecked            = profile.VotingEnabled;
-            IVotingMinPlayers.Text              = profile.VotingMinPlayers.ToString();
-            IVotingThreshold.Text               = profile.VotingThreshold.ToString(provider);
-            IAllowFilePatching.Text             = profile.AllowFilePatching.ToString();
-            IVerifySignatures.Text              = profile.VerifySignatures.ToString();
-            IRequiredBuildEnabled.IsChecked     = profile.RequiredBuildEnabled;
-            IRequiredBuild.Text                 = profile.RequiredBuild.ToString();
-            IKickDuplicates.IsChecked           = profile.KickDuplicates;
-            IVonEnabled.IsChecked               = profile.VonEnabled;
-            ICodecQuality.Value                 = profile.CodecQuality;
-            IServerConsoleLogEnabled.IsChecked  = profile.ServerConsoleLogEnabled;
-            IPidEnabled.IsChecked               = profile.PidEnabled;
-            IRankingEnabled.IsChecked           = profile.RankingEnabled;
-            IRptTimestamp.Text                  = profile.RptTimestamp;
-            IMotd.Text                          = profile.Motd;
-            IMotdDelay.Text                     = profile.MotdDelay.ToString();
-            IManualMissions.IsChecked           = profile.ManualMissions;
-            IMissionConfig.Text                 = profile.MissionsClass;
-            IPersistentBattlefield.IsChecked    = profile.PersistentBattlefield;
-            IAutoInit.IsChecked                 = profile.AutoInit;
-            IDifficultyPreset.Text              = profile.DifficultyPreset;
-            IReducedDamage.IsChecked            = profile.ReducedDamage;
-            IGroupIndicators.Text               = profile.GroupIndicators;
-            IFriendlyNameTags.Text              = profile.FriendlyNameTags;
-            IEnemyNameTags.Text                 = profile.EnemyNameTags;
-            IDetectedMines.Text                 = profile.DetectedMines;
-            IMultipleSaves.IsChecked            = profile.MultipleSaves;
-            IThirdPerson.IsChecked              = profile.ThirdPerson;
-            IWeaponInfo.Text                    = profile.WeaponInfo;
-            IStanceIndicator.Text               = profile.StanceIndicator;
-            IStaminaBar.IsChecked               = profile.StaminaBar;
-            ICameraShake.IsChecked              = profile.CameraShake;
-            IVisualAids.IsChecked               = profile.VisualAids;
-            IMapContentFriendly.IsChecked       = profile.MapContentFriendly;
-            IMapContentEnemy.IsChecked          = profile.MapContentEnemy;
-            IMapContentMines.IsChecked          = profile.MapContentMines;
-            ICommands.Text                      = profile.Commands;
-            IVonId.IsChecked                    = profile.VonId;
-            IKilledBy.IsChecked                 = profile.KilledBy;
-            IWaypoints.Text                     = profile.Waypoints;
-            ICrosshair.IsChecked                = profile.Crosshair;
-            IAutoReporting.IsChecked            = profile.AutoReporting;
-            IScoreTable.IsChecked               = profile.ScoreTable;
-            ITacticalPing.IsChecked             = profile.TacticalPing;
-            IAiAccuracy.Text                    = profile.AiAccuracy.ToString(provider);
-            IAiSkill.Text                       = profile.AiSkill.ToString(provider);
-            IAiPreset.Text                      = profile.AiPreset.ToString();
-            IMaxPacketLossEnabled.IsChecked     = profile.MaxPacketLossEnabled;
-            IMaxPacketLoss.Text                 = profile.MaxPacketLoss.ToString();
+            IVotingEnabled.IsChecked = profile.VotingEnabled;
+            IVotingMinPlayers.Text = profile.VotingMinPlayers.ToString();
+            IVotingThreshold.Text = profile.VotingThreshold.ToString(provider);
+            IAllowFilePatching.Text = profile.AllowFilePatching.ToString();
+            IVerifySignatures.Text = profile.VerifySignatures.ToString();
+            IRequiredBuildEnabled.IsChecked = profile.RequiredBuildEnabled;
+            IRequiredBuild.Text = profile.RequiredBuild.ToString();
+            IKickDuplicates.IsChecked = profile.KickDuplicates;
+            IVonEnabled.IsChecked = profile.VonEnabled;
+            ICodecQuality.Value = profile.CodecQuality;
+            IServerConsoleLogEnabled.IsChecked = profile.ServerConsoleLogEnabled;
+            IPidEnabled.IsChecked = profile.PidEnabled;
+            IRankingEnabled.IsChecked = profile.RankingEnabled;
+            IRptTimestamp.Text = profile.RptTimestamp;
+            IMotd.Text = profile.Motd;
+            IMotdDelay.Text = profile.MotdDelay.ToString();
+            IManualMissions.IsChecked = profile.ManualMissions;
+            IMissionConfig.Text = profile.MissionsClass;
+            IPersistentBattlefield.IsChecked = profile.PersistentBattlefield;
+            IAutoInit.IsChecked = profile.AutoInit;
+            IDifficultyPreset.Text = profile.DifficultyPreset;
+            IReducedDamage.IsChecked = profile.ReducedDamage;
+            IGroupIndicators.Text = profile.GroupIndicators;
+            IFriendlyNameTags.Text = profile.FriendlyNameTags;
+            IEnemyNameTags.Text = profile.EnemyNameTags;
+            IDetectedMines.Text = profile.DetectedMines;
+            IMultipleSaves.IsChecked = profile.MultipleSaves;
+            IThirdPerson.IsChecked = profile.ThirdPerson;
+            IWeaponInfo.Text = profile.WeaponInfo;
+            IStanceIndicator.Text = profile.StanceIndicator;
+            IStaminaBar.IsChecked = profile.StaminaBar;
+            ICameraShake.IsChecked = profile.CameraShake;
+            IVisualAids.IsChecked = profile.VisualAids;
+            IMapContentFriendly.IsChecked = profile.MapContentFriendly;
+            IMapContentEnemy.IsChecked = profile.MapContentEnemy;
+            IMapContentMines.IsChecked = profile.MapContentMines;
+            ICommands.Text = profile.Commands;
+            IVonId.IsChecked = profile.VonId;
+            IKilledBy.IsChecked = profile.KilledBy;
+            IWaypoints.Text = profile.Waypoints;
+            ICrosshair.IsChecked = profile.Crosshair;
+            IAutoReporting.IsChecked = profile.AutoReporting;
+            IScoreTable.IsChecked = profile.ScoreTable;
+            ITacticalPing.IsChecked = profile.TacticalPing;
+            IAiAccuracy.Text = profile.AiAccuracy.ToString(provider);
+            IAiSkill.Text = profile.AiSkill.ToString(provider);
+            IAiPreset.Text = profile.AiPreset.ToString();
+            IMaxPacketLossEnabled.IsChecked = profile.MaxPacketLossEnabled;
+            IMaxPacketLoss.Text = profile.MaxPacketLoss.ToString();
             IDisconnectTimeOutEnabled.IsChecked = profile.DisconnectTimeoutEnabled;
-            IDisconnectTimeOut.Text             = profile.DisconnectTimeout.ToString();
+            IDisconnectTimeOut.Text = profile.DisconnectTimeout.ToString();
             IKickOnSlowNetworkEnabled.IsChecked = profile.KickOnSlowNetworkEnabled;
-            IKickOnSlowNetwork.Text             = profile.KickOnSlowNetwork;
-            ITerrainGrid.Text                   = profile.TerrainGrid.ToString();
-            IViewDistance.Text                  = profile.ViewDistance.ToString();
-            IMaxPingEnabled.IsChecked           = profile.MaxPingEnabled;
-            IMaxPing.Text                       = profile.MaxPing.ToString();
-            IMaxDesyncEnabled.IsChecked         = profile.MaxDesyncEnabled;
-            IMaxDesync.Text                     = profile.MaxDesync.ToString();
-            IMaxCustomFileSize.Text             = profile.MaxCustomFileSize.ToString();
-            IMaxPacketSize.Text                 = profile.MaxPacketSize.ToString();
-            IMinBandwidthServer.Text            = profile.MinBandwidthServer.ToString(provider);
-            IMaxBandwidthServer.Text            = profile.MaxBandwidthServer.ToString(provider);
-            IMinBandwidthClient.Text            = profile.MinBandwidthClient.ToString(provider);
-            IMaxBandwidthClient.Text            = profile.MaxBandwidthClient.ToString(provider);
-            IinitBandwidthClient.Text           = profile.initBandwidthClient.ToString(provider);
-            IMaxMessagesSend.Text               = profile.MaxMessagesSend.ToString();
-            IMaxSizeNonguaranteed.Text          = profile.MaxSizeNonguaranteed.ToString();
-            IMaxSizeGuaranteed.Text             = profile.MaxSizeGuaranteed.ToString();
-            IMinErrorToSend.Text                = profile.MinErrorToSend.ToString(provider);
-            IMinErrorToSendNear.Text            = profile.MinErrorToSendNear.ToString(provider);
-            ICpuCount.Text                      = profile.CpuCount;
-            IMaxMem.Text                        = profile.MaxMem;
-            IExtraParams.Text                   = profile.ExtraParams;
-            IAdminUids.Text                     = profile.AdminUids;
-            IEnableHyperThreading.IsChecked     = profile.EnableHyperThreading;
-            IFilePatching.IsChecked             = profile.FilePatching;
-            IServerCommandPassword.Text         = profile.ServerCommandPassword;
-            IDoubleIdDetected.Text              = profile.DoubleIdDetected;
-            IOnUserConnected.Text               = profile.OnUserConnected;
-            IOnUserDisconnected.Text            = profile.OnUserDisconnected;
-            IOnHackedData.Text                  = profile.OnHackedData;
-            IOnDifferentData.Text               = profile.OnDifferentData;
-            IOnUnsignedData.Text                = profile.OnUnsignedData;
-            IRegularCheck.Text                  = profile.RegularCheck;
-            IServerModsList.SelectedValue       = profile.ServerMods;
-            IClientModsList.SelectedValue       = profile.ClientMods;
-            IHeadlessModsList.SelectedValue     = profile.HeadlessMods;
-            IMissionCheckList.SelectedValue     = profile.Missions;
-            IBattleEye.IsChecked                = profile.BattleEye;
-            IAdditionalParams.Text              = profile.additionalParams;
-            IEnableAdditionalParams.IsChecked   = profile.enableAdditionalParams;
+            IKickOnSlowNetwork.Text = profile.KickOnSlowNetwork;
+            ITerrainGrid.Text = profile.TerrainGrid.ToString();
+            IViewDistance.Text = profile.ViewDistance.ToString();
+            IMaxPingEnabled.IsChecked = profile.MaxPingEnabled;
+            IMaxPing.Text = profile.MaxPing.ToString();
+            IMaxDesyncEnabled.IsChecked = profile.MaxDesyncEnabled;
+            IMaxDesync.Text = profile.MaxDesync.ToString();
+            IMaxCustomFileSize.Text = profile.MaxCustomFileSize.ToString();
+            IMaxPacketSize.Text = profile.MaxPacketSize.ToString();
+            IMinBandwidthServer.Text = profile.MinBandwidthServer.ToString(provider);
+            IMaxBandwidthServer.Text = profile.MaxBandwidthServer.ToString(provider);
+            IMinBandwidthClient.Text = profile.MinBandwidthClient.ToString(provider);
+            IMaxBandwidthClient.Text = profile.MaxBandwidthClient.ToString(provider);
+            IinitBandwidthClient.Text = profile.initBandwidthClient.ToString(provider);
+            IMaxMessagesSend.Text = profile.MaxMessagesSend.ToString();
+            IMaxSizeNonguaranteed.Text = profile.MaxSizeNonguaranteed.ToString();
+            IMaxSizeGuaranteed.Text = profile.MaxSizeGuaranteed.ToString();
+            IMinErrorToSend.Text = profile.MinErrorToSend.ToString(provider);
+            IMinErrorToSendNear.Text = profile.MinErrorToSendNear.ToString(provider);
+            ICpuCount.Text = profile.CpuCount;
+            IMaxMem.Text = profile.MaxMem;
+            IExtraParams.Text = profile.ExtraParams;
+            IAdminUids.Text = profile.AdminUids;
+            IEnableHyperThreading.IsChecked = profile.EnableHyperThreading;
+            IUseClientBandwidth.IsChecked = profile.UseClientBandwidth;
+            IFilePatching.IsChecked = profile.FilePatching;
+            IServerCommandPassword.Text = profile.ServerCommandPassword;
+            IDoubleIdDetected.Text = profile.DoubleIdDetected;
+            IOnUserConnected.Text = profile.OnUserConnected;
+            IOnUserDisconnected.Text = profile.OnUserDisconnected;
+            IOnHackedData.Text = profile.OnHackedData;
+            IOnDifferentData.Text = profile.OnDifferentData;
+            IOnUnsignedData.Text = profile.OnUnsignedData;
+            IRegularCheck.Text = profile.RegularCheck;
+            IServerModsList.SelectedValue = profile.ServerMods;
+            IClientModsList.SelectedValue = profile.ClientMods;
+            IHeadlessModsList.SelectedValue = profile.HeadlessMods;
+            IMissionCheckList.SelectedValue = profile.Missions;
+            IBattleEye.IsChecked = profile.BattleEye;
+            IAdditionalParams.Text = profile.additionalParams;
+            IEnableAdditionalParams.IsChecked = profile.enableAdditionalParams;
 
             ToggleUi_HeadleddClientEnabled(IHeadlessClientEnabled);
             ToggleUi_VonEnabled(IVonEnabled);
@@ -213,9 +214,9 @@ namespace FASTER.Views
 
         private void IDeleteProfile_Click(object sender, RoutedEventArgs e)
         {
-            IConfirmDeleteDialog.IsOpen =  true;
-            IConfirmDeleteText.Text     =  $"Are you sure you want to delete the profile \"{IDisplayName.Content}\" ?";
-            IConfirmDeleteBtn.Click     += DeleteProfile;
+            IConfirmDeleteDialog.IsOpen = true;
+            IConfirmDeleteText.Text = $"Are you sure you want to delete the profile \"{IDisplayName.Content}\" ?";
+            IConfirmDeleteBtn.Click += DeleteProfile;
         }
 
         private void ILaunchServer_Click(object sender, RoutedEventArgs e)
@@ -262,12 +263,12 @@ namespace FASTER.Views
         {
             if (IManualMissions.IsChecked ?? false)
             {
-                IMissionAutoGrid.Visibility   = Visibility.Collapsed;
+                IMissionAutoGrid.Visibility = Visibility.Collapsed;
                 IMissionManualGrid.Visibility = Visibility.Visible;
             }
             else
             {
-                IMissionAutoGrid.Visibility   = Visibility.Visible;
+                IMissionAutoGrid.Visibility = Visibility.Visible;
                 IMissionManualGrid.Visibility = Visibility.Collapsed;
             }
         }
@@ -324,16 +325,16 @@ namespace FASTER.Views
         {
             if (IHeadlessClientEnabled.IsChecked ?? false)
             {
-                ILaunchHCs.Visibility          = Visibility.Visible;
-                IHcIpGroup.IsEnabled           = true;
-                IHcSliderGroup.IsEnabled       = true;
+                ILaunchHCs.Visibility = Visibility.Visible;
+                IHcIpGroup.IsEnabled = true;
+                IHcSliderGroup.IsEnabled = true;
                 IHeadlessClientEnabled.ToolTip = "Disable HC";
             }
             else
             {
-                ILaunchHCs.Visibility          = Visibility.Collapsed;
-                IHcIpGroup.IsEnabled           = false;
-                IHcSliderGroup.IsEnabled       = false;
+                ILaunchHCs.Visibility = Visibility.Collapsed;
+                IHcIpGroup.IsEnabled = false;
+                IHcSliderGroup.IsEnabled = false;
                 IHeadlessClientEnabled.ToolTip = "Enable HC";
             }
         }
@@ -357,14 +358,14 @@ namespace FASTER.Views
             if (IVotingEnabled.IsChecked ?? false)
             {
                 IVotingMinPlayers.IsEnabled = true;
-                IVotingThreshold.IsEnabled  = true;
-                IVotingEnabled.ToolTip      = "Disable Voting";
+                IVotingThreshold.IsEnabled = true;
+                IVotingEnabled.ToolTip = "Disable Voting";
             }
             else
             {
                 IVotingMinPlayers.IsEnabled = false;
-                IVotingThreshold.IsEnabled  = false;
-                IVotingEnabled.ToolTip      = "Enable Voting";
+                IVotingThreshold.IsEnabled = false;
+                IVotingEnabled.ToolTip = "Enable Voting";
             }
         }
 
@@ -386,12 +387,12 @@ namespace FASTER.Views
         {
             if (IPidEnabled.IsChecked ?? false)
             {
-                IPidLog.IsEnabled    = true;
+                IPidLog.IsEnabled = true;
                 IPidButton.IsEnabled = true;
             }
             else
             {
-                IPidLog.IsEnabled    = false;
+                IPidLog.IsEnabled = false;
                 IPidButton.IsEnabled = false;
             }
         }
@@ -400,12 +401,12 @@ namespace FASTER.Views
         {
             if (IRankingEnabled.IsChecked ?? false)
             {
-                IRankingLog.IsEnabled    = true;
+                IRankingLog.IsEnabled = true;
                 IRankingButton.IsEnabled = true;
             }
             else
             {
-                IRankingLog.IsEnabled    = false;
+                IRankingLog.IsEnabled = false;
                 IRankingButton.IsEnabled = false;
             }
         }
@@ -448,7 +449,7 @@ namespace FASTER.Views
                 hcCommandLine = hcCommandLine + " \"-mod=" + hcMods + "\"";
                 Clipboard.SetText(hcCommandLine);
                 ProcessStartInfo hcStartInfo = new ProcessStartInfo(IExecutable.Text, hcCommandLine);
-                Process          hcProcess   = new Process { StartInfo = hcStartInfo };
+                Process hcProcess = new Process { StartInfo = hcStartInfo };
                 hcProcess.Start();
             }
         }
@@ -457,18 +458,18 @@ namespace FASTER.Views
         {
             var dialog = new CommonOpenFileDialog
             {
-                Title                     = "Select the arma server executable",
-                IsFolderPicker            = false,
+                Title = "Select the arma server executable",
+                IsFolderPicker = false,
                 AddToMostRecentlyUsedList = false,
-                InitialDirectory          = Properties.Settings.Default.serverPath,
-                DefaultDirectory          = Properties.Settings.Default.serverPath,
-                AllowNonFileSystemItems   = false,
-                EnsureFileExists          = true,
-                EnsurePathExists          = true,
-                EnsureReadOnly            = false,
-                EnsureValidNames          = true,
-                Multiselect               = false,
-                ShowPlacesList            = true
+                InitialDirectory = Properties.Settings.Default.serverPath,
+                DefaultDirectory = Properties.Settings.Default.serverPath,
+                AllowNonFileSystemItems = false,
+                EnsureFileExists = true,
+                EnsurePathExists = true,
+                EnsureReadOnly = false,
+                EnsureValidNames = true,
+                Multiselect = false,
+                ShowPlacesList = true
             };
             dialog.Filters.Add(new CommonFileDialogFilter("Arma 3 Server Executable", ".exe"));
 
@@ -482,18 +483,18 @@ namespace FASTER.Views
 
         private void IResetPerf_Click(object sender, RoutedEventArgs e)
         {
-            IMaxCustomFileSize.Text    = "2048000";
-            IMaxPacketSize.Text        = "1430";
-            IMinBandwidthServer.Text   = "480000000";
-            IMaxBandwidthServer.Text   = "800000000";
-            IMinBandwidthClient.Text   = "65536";
-            IMaxBandwidthServer.Text   = "6250000";
-            IinitBandwidthClient.Text  = "1250000";
-            IMaxMessagesSend.Text      = "4096";
-            IMaxSizeGuaranteed.Text    = "1300";
+            IMaxCustomFileSize.Text = "2048000";
+            IMaxPacketSize.Text = "1430";
+            IMinBandwidthServer.Text = "480000000";
+            IMaxBandwidthServer.Text = "800000000";
+            IMinBandwidthClient.Text = "65536";
+            IMaxBandwidthClient.Text = "6250000";
+            IinitBandwidthClient.Text = "1250000";
+            IMaxMessagesSend.Text = "4096";
+            IMaxSizeGuaranteed.Text = "1300";
             IMaxSizeNonguaranteed.Text = "1300";
-            IMinErrorToSend.Text       = "0.001";
-            IMinErrorToSendNear.Text   = "0.01";
+            IMinErrorToSend.Text = "0.001";
+            IMinErrorToSendNear.Text = "0.01";
         }
 
         private void IMissionsRefresh_Click(object sender, RoutedEventArgs e)
@@ -573,7 +574,7 @@ namespace FASTER.Views
                 var c = ((CheckBox)IHeadlessModsList.Items.GetItemAt(IClientModsList.Items.IndexOf(cb)));
                 c.IsChecked = cb.IsChecked;
             }
-            IHeadlessModsCount.Content = IHeadlessModsList.Items.Cast<object>().Count(i => ((CheckBox) i).IsChecked == true);
+            IHeadlessModsCount.Content = IHeadlessModsList.Items.Cast<object>().Count(i => ((CheckBox)i).IsChecked == true);
         }
 
         private async void ICopyModsKeys_Click(object sender, RoutedEventArgs e)
@@ -588,13 +589,13 @@ namespace FASTER.Views
             switch ((sender as Control)?.Name)
             {
                 case "IServerCheckBox":
-                    IServerModsCount.Content = IServerModsList.Items.Cast<object>().Count(i => ((CheckBox) i).IsChecked == true);
+                    IServerModsCount.Content = IServerModsList.Items.Cast<object>().Count(i => ((CheckBox)i).IsChecked == true);
                     break;
                 case "IClientCheckBox":
-                    IClientModsCount.Content = IClientModsList.Items.Cast<object>().Count(i => ((CheckBox) i).IsChecked == true);
+                    IClientModsCount.Content = IClientModsList.Items.Cast<object>().Count(i => ((CheckBox)i).IsChecked == true);
                     break;
                 case "IHeadlessCheckBox":
-                    IHeadlessModsCount.Content = IHeadlessModsList.Items.Cast<object>().Count(i => ((CheckBox) i).IsChecked == true);
+                    IHeadlessModsCount.Content = IHeadlessModsList.Items.Cast<object>().Count(i => ((CheckBox)i).IsChecked == true);
                     break;
             }
         }
@@ -608,113 +609,114 @@ namespace FASTER.Views
             var profile = Properties.Settings.Default.Servers.ServerProfiles.Find(p => p.SafeName == _safeName);
             if (profile == null) return;
 
-            profile.DisplayName              = IDisplayName.Content.ToString();
-            profile.ServerName               = IServerName.Text;
-            profile.Executable               = IExecutable.Text;
+            profile.DisplayName = IDisplayName.Content.ToString();
+            profile.ServerName = IServerName.Text;
+            profile.Executable = IExecutable.Text;
 
             //Don't update passwords if unloading => Passwordbox don't keep their data when unloaded
-            if(updatePasswords)
+            if (updatePasswords)
             {
-                profile.Password      = IPassword.Password;
+                profile.Password = IPassword.Password;
                 profile.AdminPassword = IAdminPassword.Password;
             }
-            profile.MaxPlayers               = Convert.ToInt32(Convert.ToDouble(IMaxPlayers.Text), provider);
-            profile.Port                     = Convert.ToInt32(Convert.ToDouble(IPort.Text),       provider);
-            profile.HeadlessClientEnabled    = IHeadlessClientEnabled.IsChecked ?? false;
-            profile.HeadlessIps              = IHeadlessIps.Text;
-            profile.LocalClients             = ILocalClients.Text;
-            profile.NoOfHeadlessClients      = (int) INoOfHeadlessClients.Value;
-            profile.Loopback                 = ILoopback.IsChecked      ?? false;
-            profile.Upnp                     = IUpnp.IsChecked          ?? false;
-            profile.Netlog                   = INetlog.IsChecked        ?? false;
-            profile.VotingEnabled            = IVotingEnabled.IsChecked ?? false;
-            profile.VotingMinPlayers         = Convert.ToInt32(Convert.ToDouble(IVotingMinPlayers.Text), provider);
-            profile.VotingThreshold          = decimal.Parse(IVotingThreshold.Text, provider);
-            profile.AllowFilePatching        = Convert.ToInt32(Convert.ToDouble(IAllowFilePatching.Text), provider);
-            profile.VerifySignatures         = Convert.ToInt32(Convert.ToDouble(IVerifySignatures.Text),  provider);
-            profile.RequiredBuildEnabled     = IRequiredBuildEnabled.IsChecked ?? false;
-            profile.KickDuplicates           = IKickDuplicates.IsChecked       ?? false;
-            profile.VonEnabled               = IVonEnabled.IsChecked           ?? false;
-            profile.CodecQuality             = Convert.ToInt32(Convert.ToDouble(ICodecQuality.Value.ToString(provider), provider), provider);
-            profile.ServerConsoleLogEnabled  = IServerConsoleLogEnabled.IsChecked ?? false;
-            profile.PidEnabled               = IPidEnabled.IsChecked              ?? false;
-            profile.RankingEnabled           = IRankingEnabled.IsChecked          ?? false;
-            profile.RptTimestamp             = IRptTimestamp.Text;
-            profile.Motd                     = IMotd.Text;
-            profile.MotdDelay                = Convert.ToInt32(Convert.ToDouble(IMotdDelay.Text), provider);
-            profile.ManualMissions           = IManualMissions.IsChecked ?? false;
-            profile.MissionsClass            = IMissionConfig.Text;
-            profile.PersistentBattlefield    = IPersistentBattlefield.IsChecked ?? false;
-            profile.AutoInit                 = IAutoInit.IsChecked              ?? false;
-            profile.DifficultyPreset         = IDifficultyPreset.Text;
-            profile.ReducedDamage            = IReducedDamage.IsChecked ?? false;
-            profile.GroupIndicators          = IGroupIndicators.Text;
-            profile.FriendlyNameTags         = IFriendlyNameTags.Text;
-            profile.EnemyNameTags            = IEnemyNameTags.Text;
-            profile.DetectedMines            = IDetectedMines.Text;
-            profile.MultipleSaves            = IMultipleSaves.IsChecked ?? false;
-            profile.ThirdPerson              = IThirdPerson.IsChecked   ?? false;
-            profile.WeaponInfo               = IWeaponInfo.Text;
-            profile.StanceIndicator          = IStanceIndicator.Text;
-            profile.StaminaBar               = IStaminaBar.IsChecked         ?? false;
-            profile.CameraShake              = ICameraShake.IsChecked        ?? false;
-            profile.VisualAids               = IVisualAids.IsChecked         ?? false;
-            profile.MapContentFriendly       = IMapContentFriendly.IsChecked ?? false;
-            profile.MapContentEnemy          = IMapContentEnemy.IsChecked    ?? false;
-            profile.MapContentMines          = IMapContentMines.IsChecked    ?? false;
-            profile.Commands                 = ICommands.Text;
-            profile.VonId                    = IVonId.IsChecked    ?? false;
-            profile.KilledBy                 = IKilledBy.IsChecked ?? false;
-            profile.Waypoints                = IWaypoints.Text;
-            profile.Crosshair                = ICrosshair.IsChecked     ?? false;
-            profile.AutoReporting            = IAutoReporting.IsChecked ?? false;
-            profile.ScoreTable               = IScoreTable.IsChecked    ?? false;
-            profile.TacticalPing             = ITacticalPing.IsChecked  ?? false;
-            profile.AiAccuracy               = double.Parse(IAiAccuracy.Text, provider);
-            profile.AiSkill                  = double.Parse(IAiSkill.Text,    provider);
-            profile.AiPreset                 = Convert.ToInt32(Convert.ToDouble(IAiPreset.Text), provider);
-            profile.MaxPacketLossEnabled     = IMaxPacketLossEnabled.IsChecked ?? false;
-            profile.MaxPacketLoss            = Convert.ToInt32(Convert.ToDouble(IMaxPacketLoss.Text, provider), provider);
+            profile.MaxPlayers = Convert.ToInt32(Convert.ToDouble(IMaxPlayers.Text), provider);
+            profile.Port = Convert.ToInt32(Convert.ToDouble(IPort.Text), provider);
+            profile.HeadlessClientEnabled = IHeadlessClientEnabled.IsChecked ?? false;
+            profile.HeadlessIps = IHeadlessIps.Text;
+            profile.LocalClients = ILocalClients.Text;
+            profile.NoOfHeadlessClients = (int)INoOfHeadlessClients.Value;
+            profile.Loopback = ILoopback.IsChecked ?? false;
+            profile.Upnp = IUpnp.IsChecked ?? false;
+            profile.Netlog = INetlog.IsChecked ?? false;
+            profile.VotingEnabled = IVotingEnabled.IsChecked ?? false;
+            profile.VotingMinPlayers = Convert.ToInt32(Convert.ToDouble(IVotingMinPlayers.Text), provider);
+            profile.VotingThreshold = decimal.Parse(IVotingThreshold.Text, provider);
+            profile.AllowFilePatching = Convert.ToInt32(Convert.ToDouble(IAllowFilePatching.Text), provider);
+            profile.VerifySignatures = Convert.ToInt32(Convert.ToDouble(IVerifySignatures.Text), provider);
+            profile.RequiredBuildEnabled = IRequiredBuildEnabled.IsChecked ?? false;
+            profile.KickDuplicates = IKickDuplicates.IsChecked ?? false;
+            profile.VonEnabled = IVonEnabled.IsChecked ?? false;
+            profile.CodecQuality = Convert.ToInt32(Convert.ToDouble(ICodecQuality.Value.ToString(provider), provider), provider);
+            profile.ServerConsoleLogEnabled = IServerConsoleLogEnabled.IsChecked ?? false;
+            profile.PidEnabled = IPidEnabled.IsChecked ?? false;
+            profile.RankingEnabled = IRankingEnabled.IsChecked ?? false;
+            profile.RptTimestamp = IRptTimestamp.Text;
+            profile.Motd = IMotd.Text;
+            profile.MotdDelay = Convert.ToInt32(Convert.ToDouble(IMotdDelay.Text), provider);
+            profile.ManualMissions = IManualMissions.IsChecked ?? false;
+            profile.MissionsClass = IMissionConfig.Text;
+            profile.PersistentBattlefield = IPersistentBattlefield.IsChecked ?? false;
+            profile.AutoInit = IAutoInit.IsChecked ?? false;
+            profile.DifficultyPreset = IDifficultyPreset.Text;
+            profile.ReducedDamage = IReducedDamage.IsChecked ?? false;
+            profile.GroupIndicators = IGroupIndicators.Text;
+            profile.FriendlyNameTags = IFriendlyNameTags.Text;
+            profile.EnemyNameTags = IEnemyNameTags.Text;
+            profile.DetectedMines = IDetectedMines.Text;
+            profile.MultipleSaves = IMultipleSaves.IsChecked ?? false;
+            profile.ThirdPerson = IThirdPerson.IsChecked ?? false;
+            profile.WeaponInfo = IWeaponInfo.Text;
+            profile.StanceIndicator = IStanceIndicator.Text;
+            profile.StaminaBar = IStaminaBar.IsChecked ?? false;
+            profile.CameraShake = ICameraShake.IsChecked ?? false;
+            profile.VisualAids = IVisualAids.IsChecked ?? false;
+            profile.MapContentFriendly = IMapContentFriendly.IsChecked ?? false;
+            profile.MapContentEnemy = IMapContentEnemy.IsChecked ?? false;
+            profile.MapContentMines = IMapContentMines.IsChecked ?? false;
+            profile.Commands = ICommands.Text;
+            profile.VonId = IVonId.IsChecked ?? false;
+            profile.KilledBy = IKilledBy.IsChecked ?? false;
+            profile.Waypoints = IWaypoints.Text;
+            profile.Crosshair = ICrosshair.IsChecked ?? false;
+            profile.AutoReporting = IAutoReporting.IsChecked ?? false;
+            profile.ScoreTable = IScoreTable.IsChecked ?? false;
+            profile.TacticalPing = ITacticalPing.IsChecked ?? false;
+            profile.AiAccuracy = double.Parse(IAiAccuracy.Text, provider);
+            profile.AiSkill = double.Parse(IAiSkill.Text, provider);
+            profile.AiPreset = Convert.ToInt32(Convert.ToDouble(IAiPreset.Text), provider);
+            profile.MaxPacketLossEnabled = IMaxPacketLossEnabled.IsChecked ?? false;
+            profile.MaxPacketLoss = Convert.ToInt32(Convert.ToDouble(IMaxPacketLoss.Text, provider), provider);
             profile.DisconnectTimeoutEnabled = IDisconnectTimeOutEnabled.IsChecked ?? false;
-            profile.DisconnectTimeout        = Convert.ToInt32(Convert.ToDouble(IDisconnectTimeOut.Text, provider), provider);
+            profile.DisconnectTimeout = Convert.ToInt32(Convert.ToDouble(IDisconnectTimeOut.Text, provider), provider);
             profile.KickOnSlowNetworkEnabled = IKickOnSlowNetworkEnabled.IsChecked ?? false;
-            profile.KickOnSlowNetwork        = IKickOnSlowNetwork.Text;
-            profile.TerrainGrid              = Convert.ToInt32(Convert.ToDouble(ITerrainGrid.Text,  provider), provider);
-            profile.ViewDistance             = Convert.ToInt32(Convert.ToDouble(IViewDistance.Text, provider), provider);
-            profile.MaxPingEnabled           = IMaxPingEnabled.IsChecked ?? false;
-            profile.MaxPing                  = Convert.ToInt32(Convert.ToDouble(IMaxPing.Text, provider), provider);
-            profile.MaxDesyncEnabled         = IMaxDesyncEnabled.IsChecked ?? false;
-            profile.MaxDesync                = Convert.ToInt32(Convert.ToDouble(IMaxDesync.Text,         provider), provider);
-            profile.MaxCustomFileSize        = Convert.ToInt32(Convert.ToDouble(IMaxCustomFileSize.Text, provider), provider);
-            profile.MaxPacketSize            = Convert.ToInt32(Convert.ToDouble(IMaxPacketSize.Text,     provider), provider);
-            profile.MinBandwidthServer       = double.Parse(IMinBandwidthServer.Text, provider);
-            profile.MaxBandwidthServer       = double.Parse(IMaxBandwidthServer.Text, provider);
-            profile.MinBandwidthClient       = double.Parse(IMinBandwidthClient.Text, provider);
-            profile.MaxBandwidthClient       = double.Parse(IMaxBandwidthClient.Text, provider);
-            profile.initBandwidthClient      = double.Parse(IinitBandwidthClient.Text, provider);
-            profile.MaxMessagesSend          = Convert.ToInt32(Convert.ToDouble(IMaxMessagesSend.Text,      provider), provider);
-            profile.MaxSizeNonguaranteed     = Convert.ToInt32(Convert.ToDouble(IMaxSizeNonguaranteed.Text, provider), provider);
-            profile.MaxSizeGuaranteed        = Convert.ToInt32(Convert.ToDouble(IMaxSizeGuaranteed.Text,    provider), provider);
-            profile.MinErrorToSend           = double.Parse(IMinErrorToSend.Text,     provider);
-            profile.MinErrorToSendNear       = double.Parse(IMinErrorToSendNear.Text, provider);
-            profile.CpuCount                 = ICpuCount.Text;
-            profile.MaxMem                   = IMaxMem.Text;
-            profile.ExtraParams              = IExtraParams.Text;
-            profile.AdminUids                = IAdminUids.Text;
-            profile.EnableHyperThreading     = IEnableHyperThreading.IsChecked ?? false;
-            profile.FilePatching             = IFilePatching.IsChecked         ?? false;
-            profile.ServerCommandPassword    = IServerCommandPassword.Text;
-            profile.DoubleIdDetected         = IDoubleIdDetected.Text;
-            profile.OnUserConnected          = IOnUserConnected.Text;
-            profile.OnUserDisconnected       = IOnUserDisconnected.Text;
-            profile.OnHackedData             = IOnHackedData.Text;
-            profile.OnDifferentData          = IOnDifferentData.Text;
-            profile.OnUnsignedData           = IOnUnsignedData.Text;
-            profile.RegularCheck             = IRegularCheck.Text;
-            profile.ServerMods               = "";
+            profile.KickOnSlowNetwork = IKickOnSlowNetwork.Text;
+            profile.TerrainGrid = Convert.ToInt32(Convert.ToDouble(ITerrainGrid.Text, provider), provider);
+            profile.ViewDistance = Convert.ToInt32(Convert.ToDouble(IViewDistance.Text, provider), provider);
+            profile.MaxPingEnabled = IMaxPingEnabled.IsChecked ?? false;
+            profile.MaxPing = Convert.ToInt32(Convert.ToDouble(IMaxPing.Text, provider), provider);
+            profile.MaxDesyncEnabled = IMaxDesyncEnabled.IsChecked ?? false;
+            profile.MaxDesync = Convert.ToInt32(Convert.ToDouble(IMaxDesync.Text, provider), provider);
+            profile.MaxCustomFileSize = Convert.ToInt32(Convert.ToDouble(IMaxCustomFileSize.Text, provider), provider);
+            profile.MaxPacketSize = Convert.ToInt32(Convert.ToDouble(IMaxPacketSize.Text, provider), provider);
+            profile.MinBandwidthServer = double.Parse(IMinBandwidthServer.Text, provider);
+            profile.MaxBandwidthServer = double.Parse(IMaxBandwidthServer.Text, provider);
+            profile.MinBandwidthClient = double.Parse(IMinBandwidthClient.Text, provider);
+            profile.MaxBandwidthClient = double.Parse(IMaxBandwidthClient.Text, provider);
+            profile.initBandwidthClient = double.Parse(IinitBandwidthClient.Text, provider);
+            profile.MaxMessagesSend = Convert.ToInt32(Convert.ToDouble(IMaxMessagesSend.Text, provider), provider);
+            profile.MaxSizeNonguaranteed = Convert.ToInt32(Convert.ToDouble(IMaxSizeNonguaranteed.Text, provider), provider);
+            profile.MaxSizeGuaranteed = Convert.ToInt32(Convert.ToDouble(IMaxSizeGuaranteed.Text, provider), provider);
+            profile.MinErrorToSend = double.Parse(IMinErrorToSend.Text, provider);
+            profile.MinErrorToSendNear = double.Parse(IMinErrorToSendNear.Text, provider);
+            profile.CpuCount = ICpuCount.Text;
+            profile.MaxMem = IMaxMem.Text;
+            profile.ExtraParams = IExtraParams.Text;
+            profile.AdminUids = IAdminUids.Text;
+            profile.EnableHyperThreading = IEnableHyperThreading.IsChecked ?? false;
+            profile.UseClientBandwidth = IUseClientBandwidth.IsChecked ?? false;
+            profile.FilePatching = IFilePatching.IsChecked ?? false;
+            profile.ServerCommandPassword = IServerCommandPassword.Text;
+            profile.DoubleIdDetected = IDoubleIdDetected.Text;
+            profile.OnUserConnected = IOnUserConnected.Text;
+            profile.OnUserDisconnected = IOnUserDisconnected.Text;
+            profile.OnHackedData = IOnHackedData.Text;
+            profile.OnDifferentData = IOnDifferentData.Text;
+            profile.OnUnsignedData = IOnUnsignedData.Text;
+            profile.RegularCheck = IRegularCheck.Text;
+            profile.ServerMods = "";
             foreach (CheckBox addon in IServerModsList.Items)
             {
-                if (!profile.ServerMods.Contains((string) addon.Content) && (addon.IsChecked ?? false))
+                if (!profile.ServerMods.Contains((string)addon.Content) && (addon.IsChecked ?? false))
                 { profile.ServerMods += $"{addon.Content};"; }
             }
             profile.ClientMods = "";
@@ -747,7 +749,7 @@ namespace FASTER.Views
             try
             {
                 object profileName = Functions.SafeName(IDisplayName.Content.ToString());
-                string path        = _profilesPath;
+                string path = _profilesPath;
                 string profilePath = path
                                    + (profileName + "\\");
                 if (!Directory.Exists(path))
@@ -776,8 +778,8 @@ namespace FASTER.Views
             string profilePath = Properties.Settings.Default.serverPath;
             profile = Functions.SafeName(profile);
 
-            string config        = Path.Combine(profilePath, "Servers", profile, $"{profile}_config.cfg");
-            string basic         = Path.Combine(profilePath, "Servers", profile, $"{profile}_basic.cfg");
+            string config = Path.Combine(profilePath, "Servers", profile, $"{profile}_config.cfg");
+            string basic = Path.Combine(profilePath, "Servers", profile, $"{profile}_basic.cfg");
             string serverProfile = Path.Combine(profilePath, "Servers", profile, "users", profile, $"{profile}.Arma3Profile");
 
             Directory.CreateDirectory(Path.Combine(profilePath, "Servers", profile, "users", profile));
@@ -807,12 +809,19 @@ namespace FASTER.Views
                 $"MaxCustomFileSize = {IMaxCustomFileSize.Text};",
                 "class sockets",
                 "{",
-                  "maxPacketSize = " + IMaxPacketSize.Text + ";",
-                  "initBandwidth = " + IinitBandwidthClient.Text + ";",
-                  "minBandwidth = " + IMinBandwidthClient.Text + ";",
-                  "maxBandwidth = " + IMaxBandwidthClient.Text + ";",
-                "};",
+                $"maxPacketSize = {IMaxPacketSize.Text};",
             };
+            if (IUseClientBandwidth.IsChecked ?? false)
+            {
+                basicLines.Add("initBandwidth = " + IinitBandwidthClient.Text + ";");
+                basicLines.Add("minBandwidth = " + IMinBandwidthClient.Text + ";");
+                basicLines.Add("maxBandwidth = " + IMaxBandwidthClient.Text + ";");
+                basicLines.Add("};");
+            }
+            else
+            {
+                basicLines.Add("};");
+            }
             File.WriteAllLines(basic, basicLines);
             #endregion
 
@@ -857,16 +866,15 @@ namespace FASTER.Views
                 "\t};",
                 "};"
             };
-            var profileNever   = profileLines.Select(s => s.Replace("Never", "0")).ToList();
+            var profileNever = profileLines.Select(s => s.Replace("Never", "0")).ToList();
             var profileLimited = profileNever.Select(s => s.Replace("Limited Distance", "1")).ToList();
-            var profileFade    = profileLimited.Select(s => s.Replace("Fade Out", "1")).ToList();
-            var profileAlways  = profileFade.Select(s => s.Replace("Always", "2")).ToList();
-            var profileTrue    = profileAlways.Select(s => s.Replace("True", "1")).ToList();
-            var profileFalse   = profileTrue.Select(s => s.Replace("False", "0")).ToList();
-            File.WriteAllLines(serverProfile, profileFalse);
+            var profileFade = profileLimited.Select(s => s.Replace("Fade Out", "1")).ToList();
+            var profileAlways = profileFade.Select(s => s.Replace("Always", "2")).ToList();
+            var profileTrue = profileAlways.Select(s => s.Replace("True", "1")).ToList();
+            var profileFalse = profileTrue.Select(s => s.Replace("False", "0")).ToList();
+            File.WriteAllLines(serverProfile, profileLines);
             #endregion
         }
-
         private void ConfFileCreation(string config)
         {
             var von = !IVonEnabled.IsChecked ?? true;
@@ -1053,7 +1061,7 @@ namespace FASTER.Views
             foreach (var mission in newMissions.ToList())
             {
                 var checkedMission = checkedMissions.FirstOrDefault(m => (string)m.Content == mission.Replace(".pbo", ""))?.IsChecked ?? false;
-                IMissionCheckList.Items.Add(new CheckBox { Content = mission.Replace(".pbo", "") , IsChecked = checkedMission});
+                IMissionCheckList.Items.Add(new CheckBox { Content = mission , IsChecked = checkedMission});
             }
 
             IMissionCheckList.SelectedValue = checkedMissions;
@@ -1079,7 +1087,10 @@ namespace FASTER.Views
             if (Directory.Exists(Properties.Settings.Default.serverPath))
             {
                 newMods.AddRange(Directory.GetDirectories(Properties.Settings.Default.serverPath, "@*")
-                                          .Select(addon => addon.Replace(Properties.Settings.Default.serverPath + @"\", "")));
+                                          .Select(addon => addon.Replace(Properties.Settings.Default.serverPath + @"\@", "")));
+                newMods.AddRange(Directory.GetDirectories(Properties.Settings.Default.serverPath + @"\!Workshop", "@*")
+                                          .Select(addon => addon.Replace(Properties.Settings.Default.serverPath + @"\!Workshop\@", "(SW) ")));
+
                 List<string> targetForDeletion = new List<string>();
                 foreach (var folder in Properties.Settings.Default.localModFolders)
                 {
@@ -1087,9 +1098,9 @@ namespace FASTER.Views
                         newMods.AddRange(Directory.GetDirectories(folder, "@*"));
                     else
                     {
-                        if (!IFlyout.IsOpen || IFlyoutMessage.Content as string != "A folder could not be found and have been deleted")
+                        if (!IFlyout.IsOpen || IFlyoutMessage.Content as string != "A folder could not be found and has been deleted.")
                         {
-                            IFlyoutMessage.Content = "A folder could not be found and have been deleted";
+                            IFlyoutMessage.Content = "A folder could not be found and has been deleted.";
                             IFlyout.IsOpen         = true;
                         }
                         targetForDeletion.Add(folder);
@@ -1237,9 +1248,9 @@ namespace FASTER.Views
                     : null);
             var commandLine = "-port=" + IPort.Text;
             commandLine += " \"-config=" + configs + "_config.cfg\"";
-            commandLine += " \"-cfg=" + configs          + "_basic.cfg\"";
+            commandLine += " \"-cfg=" + configs + "_basic.cfg\"";
             commandLine += " \"-profiles=" + profilePath + "\"";
-            commandLine += " -name="                     + profileName;
+            commandLine += " -name=" + profileName;
             commandLine += " \"-mod=" + armaBranch + playerMods + "\"";
             commandLine += " \"-serverMod=" + serverMods + "\"";
 
@@ -1284,7 +1295,7 @@ namespace FASTER.Views
 
             if (!IExecutable.Text.Contains("arma3server") && !IExecutable.Text.EndsWith(".exe"))
             {
-                MetroWindow.DisplayMessage("Please select a valid Arma 3 Sever Executable.");
+                MetroWindow.DisplayMessage("Please select a valid Arma 3 Server Executable.");
                 return false;
             }
 

@@ -73,7 +73,7 @@ namespace FASTER.Models
         private SteamMod()
         {}
 
-        public SteamMod(int workshopId, string name, string author, int steamLastUpdated, bool privateMod = false)
+        public SteamMod(double workshopId, string name, string author, double steamLastUpdated, bool privateMod = false)
         {
             WorkshopId = workshopId;
             Name = name;
@@ -84,7 +84,7 @@ namespace FASTER.Models
             Task.Factory.StartNew(InitModSize);
         }
 
-        private static string GetModSize(int workshopId)
+        private static string GetModSize(double workshopId)
         {
             var modFolder = Path.Combine(Properties.Settings.Default.steamCMDPath, "steamapps", "workshop", "content", "107410", workshopId.ToString());
             if (!Directory.Exists(modFolder)) return "Unknown";
@@ -112,16 +112,16 @@ namespace FASTER.Models
             return a.Select(name => new FileInfo(name)).Select(info => info.Length).Sum();
         }
 
-        public int WorkshopId { get; set; }
+        public double WorkshopId { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Author { get; set; } = string.Empty;
-        public int SteamLastUpdated { get; set; }
-        public int LocalLastUpdated { get; set; }
+        public double SteamLastUpdated { get; set; }
+        public double LocalLastUpdated { get; set; }
         public bool PrivateMod { get; set; }
         public string Status { get; set; } = "Not Installed";
         public string Size { get; set; } = "Unknown";
 
-        public static void DeleteSteamMod(int workshopId)
+        public static void DeleteSteamMod(double workshopId)
         {
             var currentMods = GetSteamMods();
 
@@ -199,8 +199,8 @@ namespace FASTER.Models
                     if (modInfo != null)
                     {
                         var modName         = modInfo.Item1;
-                        var steamUpdateTime = modInfo.Item3;
                         var author          = modInfo.Item2;
+                        var steamUpdateTime = modInfo.Item3;
 
                         currentMods.Add(new SteamMod(modId, modName, author, steamUpdateTime));
 
@@ -210,7 +210,7 @@ namespace FASTER.Models
                         Properties.Settings.Default.Save();
                     }
                     else
-                    { MainWindow.Instance.DisplayMessage("This is a workshop Item for a different game."); }
+                    { MainWindow.Instance.DisplayMessage("This is a workshop item for a different game."); }
                 }
                 catch (Exception e) 
                 { Crashes.TrackError(e, new Dictionary<string, string> { { "Name", Properties.Settings.Default.steamUserName } }); }
@@ -221,7 +221,7 @@ namespace FASTER.Models
             }
         }
 
-        public static Tuple<string, string, int> GetModInfo(int modId)
+        public static Tuple<string, string, double> GetModInfo(double modId)
         {
             var modInfo = SteamWebApi.GetSingleFileDetails(modId);
             string author = null;
@@ -244,7 +244,7 @@ namespace FASTER.Models
 
             var modName = modInfo?.SelectToken("title").ToString();
             
-            return modInfo?.SelectToken("creator_appid").ToString() == "107410" ? new Tuple<string, string, int>(modName, author, steamUpdateTime) : null;
+            return modInfo?.SelectToken("creator_appid").ToString() == "107410" ? new Tuple<string, string, double>(modName, author, steamUpdateTime) : null;
         }
 
         public static void UpdateInfoFromSteam()
@@ -256,7 +256,7 @@ namespace FASTER.Models
             {
                 if (steamMod.PrivateMod) continue;
 
-                Tuple<string, string, int> modInfo = null;
+                Tuple<string, string, double> modInfo = null;
                 try
                 { modInfo = GetModInfo(steamMod.WorkshopId); }
                 catch (NullReferenceException)
