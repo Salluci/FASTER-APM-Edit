@@ -440,7 +440,7 @@ namespace FASTER.Views
             });
             for (int hc = 1; hc <= INoOfHeadlessClients.Value; hc++)
             {
-                string hcCommandLine = "-client -connect=127.0.0.1 -password=" + IPassword.Password + " -profiles=" + profilePath + " -nosound -port=" + IPort.Text;
+                string hcCommandLine = "-client -connect=127.0.0.1 -password=" + IPassword.Password + " -nosound -port=" + IPort.Text;
                 string hcMods = IHeadlessModsList.Items
                                                  .Cast<CheckBox>()
                                                  .Where(addon => addon.IsChecked ?? false)
@@ -1087,9 +1087,9 @@ namespace FASTER.Views
             if (Directory.Exists(Properties.Settings.Default.serverPath))
             {
                 newMods.AddRange(Directory.GetDirectories(Properties.Settings.Default.serverPath, "@*")
-                                          .Select(addon => addon.Replace(Properties.Settings.Default.serverPath + @"\@", "")));
+                                          .Select(addon => addon.Replace(Properties.Settings.Default.serverPath + @"\", "")));
                 newMods.AddRange(Directory.GetDirectories(Properties.Settings.Default.serverPath + @"\!Workshop", "@*")
-                                          .Select(addon => addon.Replace(Properties.Settings.Default.serverPath + @"\!Workshop\@", "(SW) ")));
+                                          .Select(addon => addon.Replace(Properties.Settings.Default.serverPath + @"\!Workshop", "!Workshop")));
 
                 List<string> targetForDeletion = new List<string>();
                 foreach (var folder in Properties.Settings.Default.localModFolders)
