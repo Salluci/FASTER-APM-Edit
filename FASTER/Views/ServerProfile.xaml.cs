@@ -1061,7 +1061,7 @@ namespace FASTER.Views
             foreach (var mission in newMissions.ToList())
             {
                 var checkedMission = checkedMissions.FirstOrDefault(m => (string)m.Content == mission.Replace(".pbo", ""))?.IsChecked ?? false;
-                IMissionCheckList.Items.Add(new CheckBox { Content = mission , IsChecked = checkedMission});
+                IMissionCheckList.Items.Add(new CheckBox { Content = mission.Replace(".pbo", ""), IsChecked = checkedMission});
             }
 
             IMissionCheckList.SelectedValue = checkedMissions;
