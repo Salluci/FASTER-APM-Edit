@@ -628,51 +628,51 @@
                             <CheckBox Name="IMapContentMines" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="4"  Content="Map Content Mines" ToolTip="Display mines in Map" Margin="5"/>
 
                             <ComboBox Name="IGroupIndicators" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Group Indicators" ToolTip="Group Indicators" IsEditable="False" Margin="5">
-                                <ComboBoxItem IsSelected="True">Never</ComboBoxItem>
-                                <ComboBoxItem>Limited Distance</ComboBoxItem>
-                                <ComboBoxItem>Always</ComboBoxItem>
+                                <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+                                <ComboBoxItem>1</ComboBoxItem>
+                                <ComboBoxItem>2</ComboBoxItem>
                             </ComboBox>
 
                             <ComboBox Name="IFriendlyNameTags" Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="3" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Friendly Name Tags" ToolTip="Friendly Name Tags" IsEditable="False" Margin="5">
-                                <ComboBoxItem IsSelected="True">Never</ComboBoxItem>
-                                <ComboBoxItem>Limited Distance</ComboBoxItem>
-                                <ComboBoxItem>Always</ComboBoxItem>
+                                <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+                                <ComboBoxItem>1</ComboBoxItem>
+                                <ComboBoxItem>2</ComboBoxItem>
                             </ComboBox>
 
                             <ComboBox Name="IEnemyNameTags" Grid.Row="6" Grid.Column="6" Grid.ColumnSpan="3" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Enemy Name Tags" ToolTip="Enemy Name Tags" IsEditable="False" Margin="5">
-                                <ComboBoxItem IsSelected="True">Never</ComboBoxItem>
-                                <ComboBoxItem>Limited Distance</ComboBoxItem>
-                                <ComboBoxItem>Always</ComboBoxItem>
+                                <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+                                <ComboBoxItem>1</ComboBoxItem>
+                                <ComboBoxItem>2</ComboBoxItem>
                             </ComboBox>
 
                             <ComboBox Name="IDetectedMines" Grid.Row="6" Grid.Column="9" Grid.ColumnSpan="3" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Detected Mines" ToolTip="Detected Mines" IsEditable="False" Margin="5">
-                                <ComboBoxItem IsSelected="True">Never</ComboBoxItem>
-                                <ComboBoxItem>Limited Distance</ComboBoxItem>
-                                <ComboBoxItem>Always</ComboBoxItem>
+                                <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+                                <ComboBoxItem>1</ComboBoxItem>
+                                <ComboBoxItem>2</ComboBoxItem>
                             </ComboBox>
 
                             <ComboBox Name="ICommands" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Commands" ToolTip="Commands" IsEditable="False" Margin="5">
-                                <ComboBoxItem IsSelected="True">Never</ComboBoxItem>
-                                <ComboBoxItem>Fade Out</ComboBoxItem>
-                                <ComboBoxItem>Always</ComboBoxItem>
+                                <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+                                <ComboBoxItem>1</ComboBoxItem>
+                                <ComboBoxItem>2</ComboBoxItem>
                             </ComboBox>
 
                             <ComboBox Name="IWaypoints" Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="3" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Waypoints" ToolTip="Waypoints" IsEditable="False" Margin="5">
-                                <ComboBoxItem IsSelected="True">Never</ComboBoxItem>
-                                <ComboBoxItem>Fade Out</ComboBoxItem>
-                                <ComboBoxItem>Always</ComboBoxItem>
+                                <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+                                <ComboBoxItem>1</ComboBoxItem>
+                                <ComboBoxItem>2</ComboBoxItem>
                             </ComboBox>
 
                             <ComboBox Name="IWeaponInfo" Grid.Row="7" Grid.Column="6" Grid.ColumnSpan="3" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Weapon Info" ToolTip="Weapon Info" IsEditable="False" Margin="5">
-                                <ComboBoxItem IsSelected="True">Never</ComboBoxItem>
-                                <ComboBoxItem>Fade Out</ComboBoxItem>
-                                <ComboBoxItem>Always</ComboBoxItem>
+                                <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+                                <ComboBoxItem>1</ComboBoxItem>
+                                <ComboBoxItem>2</ComboBoxItem>
                             </ComboBox>
 
                             <ComboBox Name="IStanceIndicator" Grid.Row="7" Grid.Column="9" Grid.ColumnSpan="3" mah:TextBoxHelper.UseFloatingWatermark="True" mah:TextBoxHelper.Watermark="Stance Indicator" ToolTip="StanceIndicator" IsEditable="False" Margin="5">
-                                <ComboBoxItem IsSelected="True">Never</ComboBoxItem>
-                                <ComboBoxItem>Fade Out</ComboBoxItem>
-                                <ComboBoxItem>Always</ComboBoxItem>
+                                <ComboBoxItem IsSelected="True">0</ComboBoxItem>
+                                <ComboBoxItem>1</ComboBoxItem>
+                                <ComboBoxItem>2</ComboBoxItem>
                             </ComboBox>
 
                             <StackPanel Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="12" Orientation="Horizontal" HorizontalAlignment="Center">
