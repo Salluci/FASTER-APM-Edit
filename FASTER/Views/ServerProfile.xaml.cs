@@ -440,7 +440,7 @@ namespace FASTER.Views
             });
             for (int hc = 1; hc <= INoOfHeadlessClients.Value; hc++)
             {
-                string hcCommandLine = "-client -connect=127.0.0.1 -password=" + IPassword.Password + " -nosound -port=" + IPort.Text + IExtraParams.Text;
+                string hcCommandLine = "-client -connect=127.0.0.1 -password=" + IPassword.Password + " -nosound -port=" + IPort.Text + " " + IExtraParams.Text;
                 string hcMods = IHeadlessModsList.Items
                                                  .Cast<CheckBox>()
                                                  .Where(addon => addon.IsChecked ?? false)
