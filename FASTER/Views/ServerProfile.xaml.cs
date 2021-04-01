@@ -422,7 +422,7 @@ namespace FASTER.Views
         private void ILaunchHCs_Click(object sender, RoutedEventArgs e)
         {
             string profileName = Functions.SafeName(IDisplayName.Content.ToString());
-            string profilePath = _profilesPath + profileName + "\\";
+            string profilePath = _profilesPath + profileName;
 
             if (!(IHeadlessClientEnabled.IsChecked ?? false)) return;
 
@@ -440,7 +440,17 @@ namespace FASTER.Views
             });
             for (int hc = 1; hc <= INoOfHeadlessClients.Value; hc++)
             {
+                int armaServers = 0;
+                Process[] processCollection = Process.GetProcesses();
+                foreach (Process p in processCollection)
+                {
+                    if (p.ProcessName.Contains("arma"))
+                    {
+                        armaServers++;
+                    }
+                }
                 string hcCommandLine = "-client -connect=127.0.0.1 -password=" + IPassword.Password + " -nosound -port=" + IPort.Text + " " + IExtraParams.Text;
+                hcCommandLine += " \"-profiles=" + profilePath + "_HC" + armaServers + "\"";
                 string hcMods = IHeadlessModsList.Items
                                                  .Cast<CheckBox>()
                                                  .Where(addon => addon.IsChecked ?? false)
@@ -791,37 +801,11 @@ namespace FASTER.Views
             #region BASIC FILE CREATION
             List<string> basicLines = new List<string>
             {
-                "adapter = -1;",
-                "3D_Performance=1;",
-                "Resolution_W = 0;",
-                "Resolution_H = 0;",
-                "Resolution_Bpp = 32;",
                 $"terrainGrid = {ITerrainGrid.Text};",
                 $"viewDistance = {IViewDistance.Text};",
-                "Windowed = 0;",
-                $"MaxMsgSend = {IMaxMessagesSend.Text};",
-                $"MaxSizeGuaranteed = {IMaxSizeGuaranteed.Text};",
-                $"MaxSizeNonguaranteed = {IMaxSizeNonguaranteed.Text};",
                 $"MinBandwidth = {IMinBandwidthServer.Text};",
-                $"MaxBandwidth = {IMaxBandwidthServer.Text};",
-                $"MinErrorToSend = {IMinErrorToSend.Text.Replace(',', '.')};",
-                $"MinErrorToSendNear = {IMinErrorToSendNear.Text.Replace(',', '.')};",
-                $"MaxCustomFileSize = {IMaxCustomFileSize.Text};",
-                "class sockets",
-                "{",
-                $"maxPacketSize = {IMaxPacketSize.Text};",
+                $"MaxCustomFileSize = {IMaxCustomFileSize.Text};"
             };
-            if (IUseClientBandwidth.IsChecked ?? false)
-            {
-                basicLines.Add("initBandwidth = " + IinitBandwidthClient.Text + ";");
-                basicLines.Add("minBandwidth = " + IMinBandwidthClient.Text + ";");
-                basicLines.Add("maxBandwidth = " + IMaxBandwidthClient.Text + ";");
-                basicLines.Add("};");
-            }
-            else
-            {
-                basicLines.Add("};");
-            }
             File.WriteAllLines(basic, basicLines);
             #endregion
 
