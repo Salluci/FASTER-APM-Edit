@@ -804,6 +804,7 @@ namespace FASTER.Views
                 $"terrainGrid = {ITerrainGrid.Text};",
                 $"viewDistance = {IViewDistance.Text};",
                 $"MinBandwidth = {IMinBandwidthServer.Text};",
+                $"MaxMsgSend = {IMaxMessagesSend.Text};",
                 $"MaxCustomFileSize = {IMaxCustomFileSize.Text};"
             };
             File.WriteAllLines(basic, basicLines);
